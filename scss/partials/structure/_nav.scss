@@ -1,21 +1,37 @@
-nav {
-	background: $nav-background-color;
-	padding: 1.5em;
-	
+.nav-wrapper {
 	position: fixed;
-	top: 50px;
-	left: 50px;
+	height: calc(100vh - #{2*$nav-margin});
+	top: $nav-margin;
+	left: $nav-margin;
 	width: 300px;
 	
+	#gsd-logo {
+		position: absolute;
+		left: $nav-item-padding;
+		bottom: 0;
+		width: 200px;
+	}
+	
+}
+
+nav {
+	background: $nav-background-color;
+	padding: 1.25em;
+	padding-bottom: .5em;
+	width: 100%;
+	
+	
 	img {
-		margin-bottom: 3em;
+		margin-bottom: 2.5em;
+		margin-right: 15px;
 	}
 	ul {
 		padding: 0;
+		margin-bottom: 0;
 		li {
 			border:0;
 			border-top: 2px solid black;	
-			padding: 1em 1em .5em 1em;
+			padding: $nav-item-padding $nav-item-padding $nav-item-padding/2 $nav-item-padding;
 			
 			&:hover {
 				cursor: pointer;
@@ -24,6 +40,4 @@ nav {
 			}
 		}
 	}
-	
-	
 }

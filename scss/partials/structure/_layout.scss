@@ -1,13 +1,16 @@
 html {
 	background: $background-color;
-	min-height: 200vh;
 	min-width: 100vw;
 }
 
 body {
 	margin: 0;
+	
 }
 
+#primary {
+	min-height: 60vh;
+}
 
 article {
 	
