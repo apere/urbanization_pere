@@ -6,6 +6,15 @@ svg {
 	text-rendering: optimizeLegibility;
 }
 
+nav ul {
+	font-family: $font-nav;
+	@extend %transitions;
+	
+	li {
+			@extend %transitions;
+	}
+}
+
 
 // *** headers ***
 h1, h2, h3 {

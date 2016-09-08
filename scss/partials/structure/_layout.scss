@@ -1,5 +1,11 @@
-body {
+html {
+	background: $background-color;
+	min-height: 200vh;
+	min-width: 100vw;
+}
 
+body {
+	margin: 0;
 }
 
 

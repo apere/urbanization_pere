@@ -1,9 +1,47 @@
-a {
+nav ul, nav ul li, a {
   transition: all 250ms ease-in-out; }
 
 .clear {
   width: 100%;
   clear: both; }
 
+@font-face {
+  font-family: 'AkkuratStd-Mono';
+  src: url("assets/fonts/AkkuratStd-Mono.eot?#iefix") format("embedded-opentype"), url("assets/fonts/AkkuratStd-Mono.otf") format("opentype"), url("assets/fonts/AkkuratStd-Mono.woff") format("woff"), url("assets/fonts/AkkuratStd-Mono.ttf") format("truetype"), url("assets/fonts/AkkuratStd-Mono.svg#AkkuratStd-Mono") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 svg {
   text-rendering: optimizeLegibility; }
+
+nav ul {
+  font-family: "AkkuratStd-Mono"; }
+
+html {
+  background: #000;
+  min-height: 200vh;
+  min-width: 100vw; }
+
+body {
+  margin: 0; }
+
+nav ul {
+  list-style: none; }
+
+nav {
+  background: #FFF;
+  padding: 1.5em;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 300px; }
+  nav img {
+    margin-bottom: 3em; }
+  nav ul {
+    padding: 0; }
+    nav ul li {
+      border: 0;
+      border-top: 2px solid black;
+      padding: 1em 1em .5em 1em; }
+      nav ul li:hover {
+        cursor: pointer;
+        color: #dedad6; }

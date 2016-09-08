@@ -1,28 +1,13 @@
 // All variables associated with type (other than colors) go here
 
-$font-serif: "Courier New", Courier, monospace;
-$font-sans: 'Helvetica', sans-serif;
 
-$light: 200;
-$normal: 400;
-$bold: 800;
-
-// Base Fonts in px
-$base-font-size: 13px;
-$base-line-height: 1.25em;
+@font-face {
+  font-family: 'AkkuratStd-Mono';
+  src: url('assets/fonts/AkkuratStd-Mono.eot?#iefix') format('embedded-opentype'),  url('assets/fonts/AkkuratStd-Mono.otf')  format('opentype'),
+	     url('assets/fonts/AkkuratStd-Mono.woff') format('woff'), url('assets/fonts/AkkuratStd-Mono.ttf')  format('truetype'), url('assets/fonts/AkkuratStd-Mono.svg#AkkuratStd-Mono') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
-// Rest of font-sizes in em
-$title-font-size: 2em;
-$title-line-height: 1em;
-
-$medium-title-font-size: 1.7em;
-$medium-title-line-height: 1em;
-
-$small-title-font-size: 1.35em;
-$small-title-line-height: 1em;
-
-$small-font-size: .6em;
-$medium-font-size: .85em;
-$regular-font-size: 1em;
-$large-font-size: 1.2em;
+$font-nav: "AkkuratStd-Mono";

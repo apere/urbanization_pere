@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'AkkuratStd-Mono';
+  src: url('AkkuratStd-Mono.eot?#iefix') format('embedded-opentype'),  url('AkkuratStd-Mono.otf')  format('opentype'),
+	     url('AkkuratStd-Mono.woff') format('woff'), url('AkkuratStd-Mono.ttf')  format('truetype'), url('AkkuratStd-Mono.svg#AkkuratStd-Mono') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
