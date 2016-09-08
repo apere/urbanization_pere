@@ -14,11 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'urbanization_pere' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'urbanization_pere' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'urbanization_pere' ), 'urbanization_pere', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
+		<?php
+	 		 // main content info here
+		?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

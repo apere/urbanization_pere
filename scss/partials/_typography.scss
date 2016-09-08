@@ -1,0 +1,98 @@
+html, body {
+
+}
+
+svg {
+	text-rendering: optimizeLegibility;
+}
+
+
+// *** headers ***
+h1, h2, h3 {
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+
+}
+
+h4 {
+	
+}
+
+h5 {
+	
+}
+
+h6 {
+	
+}
+// *** end headers ***
+
+
+// *** inline text treatment ***
+
+
+a {
+	@extend %transitions;
+  
+  &:hover, &:active, &:focus {
+    
+  }
+}
+
+b, strong {
+}
+
+em, i {
+
+}
+
+
+small {
+
+}
+
+span {
+	
+}
+
+// ***  end inline text treatment ***
+
+
+// *** Block Text Options ***
+
+p {
+
+}
+
+blockquote, .quote {
+
+}
+
+// definition lists 
+dl {
+	dt {
+		
+	}
+	dd {
+		
+	}
+}
+
+figcaption {
+	
+}
+
+
+// *** End Block Text Options ***

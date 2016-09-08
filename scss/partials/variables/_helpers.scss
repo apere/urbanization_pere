@@ -1,0 +1,10 @@
+// Put all helper classes that you may want to extend here 
+
+%transitions {
+  transition: all 250ms ease-in-out;
+}
+
+.clear {
+  width: 100%;
+  clear: both; 
+}
