@@ -10,8 +10,10 @@ body {
 
 #primary {
 	height: 100vh;
+	width: calc(100vw - #{$nav-width + $nav-margin});
 	position:absolute;
 	top: 0;
+	right:0;
 	
 }
 
