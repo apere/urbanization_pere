@@ -5,6 +5,8 @@
 	left: $nav-margin;
 	width: 300px;
 	
+	
+	
 	#gsd-logo {
 		position: absolute;
 		left: $nav-item-padding;
@@ -18,7 +20,6 @@ nav {
 	background: $nav-background-color;
 	padding: 1.25em;
 	padding-bottom: .5em;
-	width: 100%;
 	
 	
 	img {
@@ -29,14 +30,24 @@ nav {
 		padding: 0;
 		margin-bottom: 0;
 		li {
+			@extend %transitions;
 			border:0;
 			border-top: 2px solid black;	
 			padding: $nav-item-padding $nav-item-padding $nav-item-padding/2 $nav-item-padding;
+			min-height: 0;
 			
 			&:hover {
 				cursor: pointer;
-				color: $type-alt;
-				//background: $nav-background-alt;
+				//color: $type-alt;
+				background: $nav-background-alt;
+			}
+			
+			&.open {
+				min-height: 400px;
+				
+				&:hover {
+					background: $nav-background-color;
+				}
 			}
 		}
 	}
