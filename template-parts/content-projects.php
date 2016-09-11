@@ -10,6 +10,6 @@
 ?>
 
 	<?php if(has_category('Projects')): ?>
-		<li><?php the_title() ?></li>
+		<li><a href ="<?php echo(get_permalink()) ?>"><?php the_title() ?></a></li>
 	<?php endif; ?>
 	
