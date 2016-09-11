@@ -15,14 +15,21 @@ body {
 	top: 0;
 	right:0;
 	
-}
-
-article {
+	overflow: auto;
+	
+	#main {
+		padding: $nav-margin #{2*$nav-margin} $nav-margin #{2*$nav-margin};	
+		
+	}
 	
 }
 
-section {
+article {
 
+}
+
+section {
+	margin-bottom: 4em;
 }
 
 figure {

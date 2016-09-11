@@ -5,11 +5,7 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-	 		 // main content info here
-		?>
-			
-			
+		<?php get_template_part('sections') ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

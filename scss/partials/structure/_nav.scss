@@ -38,16 +38,11 @@ nav {
 			
 			&:hover {
 				cursor: pointer;
-				//color: $type-alt;
-				background: $nav-background-alt;
+				color: $type-alt;
 			}
 			
-			&.open {
-				min-height: 400px;
-				
-				&:hover {
-					background: $nav-background-color;
-				}
+			&.active {
+				color: $type-alt;
 			}
 		}
 	}
