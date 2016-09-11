@@ -6,10 +6,22 @@
  */
 
 jQuery(function($){
+	var open = false;
+	var lastClicked = "";
+	var lastClickedElement;
+	var currClickedElement;
 	
 	$('#people-list li').click(function(e){
 			e.preventDefault();
 			var currentUrl = $(this).data('posturl');
+			var pContent = $('.person-content');
+			currClickedElement = $(this);
+		
+			if(lastClickedElement && !currClickedElement.hasClass('current')) {
+				lastClickedElement.removeClass('current');
+			}
+			currClickedElement.addClass('current');
+		
 			$.ajax({
 					type : 'post',
 					url : currentUrl,  
@@ -22,15 +34,33 @@ jQuery(function($){
 						// trim out the content
 						var outputs = String(data.substring(data.indexOf('<div class="entry-content">')));
 						var i = outputs.indexOf("<!-- .entry-content -->");
-						console.log(data.indexOf("article"));
 						outputs = outputs.substring(0, i);
 						
-						// Place the content
-						$('.person-content').html(outputs);
+						if(!open) { // first click
+							pContent.html(outputs);
+							pContent.css("opacity", "1");
+							pContent.css("display", "none");
+							pContent.slideToggle(500);
+							open = true;
+						}
+						else if(lastClicked !== currentUrl) { // did we click the same one twice?
+							pContent.animate({
+									opacity: "toggle"
+							}, 500, function() {
+								
+								
+								pContent.html(outputs);
+								pContent.animate({
+									opacity: "toggle"
+								}, 600, function() {
+									
+								});
+							});
+						}
 						
-						console.log(outputs);
-						
-							
+						lastClickedElement = currClickedElement;
+						lastClicked = currentUrl;
+						open = true;
 					}
 			});
 	});

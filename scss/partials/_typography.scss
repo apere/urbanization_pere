@@ -11,7 +11,7 @@ nav ul {
 	@extend %transitions;
 	
 	li {
-			@extend %transitions;
+		@extend %transitions;
 	}
 }
 
@@ -20,7 +20,9 @@ article main {
 	font-size: 1.5em;
 }
 
-
+.current {
+	font-family: $font-body-b !important;
+}
 
 // *** headers ***
 h1, h2, h3 {
@@ -36,6 +38,15 @@ h1 {
 	@extend %transitions;
 	font-size: 1em;
 	font-weight: 100;
+}
+
+a {
+	color: $type-basic;
+	text-decoration: none;
+	&:hover {
+		color: $type-alt;
+	}
+	
 }
 
 h2 {

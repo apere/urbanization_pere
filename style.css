@@ -1,4 +1,4 @@
-nav ul, nav ul li, h1, a {
+nav ul, nav ul li, h1, a, ol.section-list li, ul.section-list li {
   transition: all 250ms ease-in-out; }
 
 .clear {
@@ -33,10 +33,19 @@ article main {
   font-family: "Fakt-Normal";
   font-size: 1.5em; }
 
+.current {
+  font-family: "Fakt-Bold" !important; }
+
 h1 {
   font-family: "AkkuratStd-Mono";
   font-size: 1em;
   font-weight: 100; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+  a:hover {
+    color: #dedad6; }
 
 html {
   background: #bdb7b0;
@@ -63,6 +72,19 @@ section {
 
 p {
   margin: 0 0 1em 0; }
+
+ol, ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.2em; }
+  ol.section-list, ul.section-list {
+    cursor: pointer; }
+    ol.section-list li, ul.section-list li {
+      font-weight: 500; }
+      ol.section-list li:hover, ul.section-list li:hover {
+        color: #dedad6; }
+        ol.section-list li:hover.current, ul.section-list li:hover.current {
+          color: #000; }
 
 nav ul {
   list-style: none; }
