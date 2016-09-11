@@ -10,6 +10,8 @@
 ?>
 
 	<?php if(has_category('People')): ?>
-		<li><?php the_title() ?></li>
+		<li data-posturl="<?php echo(get_permalink()) ?>">
+				<?php the_title() ?>
+		</li>
 	<?php endif; ?>
 	

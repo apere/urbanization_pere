@@ -100,12 +100,28 @@ function urbanization_pere_scripts() {
 	wp_enqueue_script( 'urbanization_pere-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'urbanization_pere-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	
+	wp_enqueue_script('urbanization_pere-people', get_stylesheet_directory_uri() . '/js/people.js');
+  wp_localize_script( 'urbanization_pere-people', 'myAjax', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'urbanization_pere_scripts' );
+
+function do_peopleAjaxFunction()
+{
+    $post_id = url_to_postid($_POST['post_url']);
+    $post = get_post( $post_id, OBJECT);
+    $response = apply_filters( 'the_content', $post->post_content );
+    echo $response;
+    die();
+}
+add_action( 'wp_ajax_nopriv_myAjaxHandler', 'do_peopleAjaxFunction' );  
+add_action( 'wp_ajax_myAjaxHandler', 'do_peopleAjaxFunction' );
+
+
 
 /**
  * Implement the Custom Header feature.

@@ -12,7 +12,7 @@
 		endif; ?>
 			</ul>
 			
-			<div id="people-person"></div>
+			<div id="people-person" class="person-content"></div>
 		</main>
 	</article>
 </section>
