@@ -10,6 +10,16 @@ nav ul, nav ul li, h1, a {
   src: url("assets/fonts/AkkuratStd-Mono.eot?#iefix") format("embedded-opentype"), url("assets/fonts/AkkuratStd-Mono.otf") format("opentype"), url("assets/fonts/AkkuratStd-Mono.woff") format("woff"), url("assets/fonts/AkkuratStd-Mono.ttf") format("truetype"), url("assets/fonts/AkkuratStd-Mono.svg#AkkuratStd-Mono") format("svg");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'Fakt-Normal';
+  src: url("assets/fonts/Fakt-Normal.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Fakt-Normal.otf") format("opentype"), url("assets/fonts/Fakt-Normal.woff") format("woff"), url("assets/fonts/Fakt-Normal.ttf") format("truetype"), url("assets/fonts/Fakt-Normal.svg#Fakt-Normal") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Fakt-Bold';
+  src: url("assets/fonts/Fakt-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Fakt-Bold.otf") format("opentype"), url("assets/fonts/Fakt-Bold.woff") format("woff"), url("assets/fonts/Fakt-Bold.ttf") format("truetype"), url("assets/fonts/Fakt-Bold.svg#Fakt-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 html, body {
   font-size: 14px; }
 
@@ -18,6 +28,10 @@ svg {
 
 nav ul {
   font-family: "AkkuratStd-Mono"; }
+
+article p {
+  font-family: "Fakt-Normal";
+  font-size: 1.5em; }
 
 h1 {
   font-family: "AkkuratStd-Mono";
@@ -41,8 +55,14 @@ body {
   #primary #main {
     padding: 50px 100px 50px 100px; }
 
+h1 {
+  margin-bottom: 1em; }
+
 section {
-  margin-bottom: 4em; }
+  margin-bottom: 3em; }
+
+p {
+  margin: 0 0 1em 0; }
 
 nav ul {
   list-style: none; }
