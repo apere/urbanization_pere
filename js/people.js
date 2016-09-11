@@ -40,8 +40,11 @@ jQuery(function($){
 							pContent.html(outputs);
 							pContent.css("opacity", "1");
 							pContent.css("display", "none");
-							pContent.slideToggle(500);
-							open = true;
+							$('#people-list').animate({"margin-bottom": "4em"}, 100, function() {
+								pContent.slideToggle(500);
+								open = true;
+							});
+							
 						}
 						else if(lastClicked !== currentUrl) { // did we click the same one twice?
 							pContent.animate({
