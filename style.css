@@ -1,3 +1,10 @@
+/*
+Theme Name: Urbanization Pere
+Author: adam m pere
+Author URI: http://adampere.com/
+Description: A custom theme for the Office of Urbanization at the Harvard Graduate School of Design
+Version: 1.0
+*/
 nav ul, nav ul li, nav ul li div, h1, a, article.post.type-post h1, ol.section-list li, ul.section-list li {
   transition: all 250ms ease-in-out; }
 
@@ -85,7 +92,7 @@ article.post.type-post h1 {
   font-size: 1.5rem;
   font-weight: 100;
   margin-top: 0 !important;
-  margin-bottom: 2.5rem; }
+  margin-bottom: 1rem; }
 
 blockquote, .quote {
   margin-bottom: 2.5rem; }
@@ -213,7 +220,8 @@ nav ul {
   #nav-mobile-logo img {
     margin-bottom: 2.2em;
     margin-right: 15px;
-    max-width: 250px; }
+    max-width: 250px;
+    width: 100%; }
 
 .nav-wrapper {
   position: absolute;
@@ -252,7 +260,8 @@ nav {
   nav img {
     margin-bottom: 2.5em;
     margin-right: 15px;
-    max-width: 250px; }
+    max-width: 250px;
+    width: 100%; }
   nav ul {
     padding: 0;
     margin-bottom: 0; }

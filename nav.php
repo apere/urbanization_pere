@@ -22,24 +22,25 @@
 						get_template_part('sections-positions-nav');
 					?>
 				</li>
-				<li >
+				<li>
 					<div data-link="projects" class="link">Projects</div>
 					<?php 
 						get_template_part('sections-projects-nav');
 					?>
 				</li>
-				<li >
+				<li>
 					<div data-link="people" class="link">People</div>
 					<?php 
 						get_template_part('sections-people-nav');
 					?>
 				</li>
-				<li >
+				<li>
 					<div data-link="publics" class="link">Publics</div>
 					<?php 
 						get_template_part('sections-publics-nav');
 					?>
-				</li> 
+				</li>
+				
 			</ul>
 		</nav>
 		<img id="gsd-logo" src="<?php echo get_bloginfo('template_directory');?>/assets/GSD_logo1.svg">

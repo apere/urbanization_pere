@@ -1,6 +1,6 @@
 <section id="publics">
 	<article class="section-content">
-		<h1>Projects</h1>
+		<h1>Publics</h1>
 		<main>
 			<?php if ( have_posts() ) : ?>
 			<ul id="public-list" class = "section-list">
