@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		window.location.href = currURL;
 	})
 	
-  $('nav li').click(function() {
+  $('nav li div').click(function() {
 		var anchor = $(this).data("link");		
 		var aTag = $("#"+ anchor);
 		

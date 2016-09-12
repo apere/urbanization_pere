@@ -165,13 +165,15 @@ nav {
     nav ul li {
       border: 0;
       border-top: 2px solid black;
-      padding: 1em 1em 0.5em 1em;
       min-height: 0; }
-      nav ul li:hover {
-        cursor: pointer;
-        color: #dedad6; }
-      nav ul li.active {
-        color: #dedad6; }
+      nav ul li div {
+        width: 100%;
+        padding: 1em 1em 0.5em 1em; }
+        nav ul li div:hover {
+          cursor: pointer;
+          color: #dedad6; }
+        nav ul li div.active {
+          color: #dedad6; }
 
 @media only screen and (min-width: 800px) {
   html {

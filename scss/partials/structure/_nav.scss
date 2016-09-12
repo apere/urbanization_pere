@@ -34,17 +34,21 @@ nav {
 			@extend %transitions;
 			border:0;
 			border-top: 2px solid black;	
-			padding: $nav-item-padding $nav-item-padding $nav-item-padding/2 $nav-item-padding;
 			min-height: 0;
 			
-			&:hover {
-				cursor: pointer;
-				color: $type-alt;
+			div{
+				width: 100%;
+				padding: $nav-item-padding $nav-item-padding $nav-item-padding/2 $nav-item-padding;
+				&:hover {
+					cursor: pointer;
+					color: $type-alt;
+				}
+			
+				&.active {
+					color: $type-alt;
+				}
 			}
 			
-			&.active {
-				color: $type-alt;
-			}
 		}
 	}
 }
