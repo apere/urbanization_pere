@@ -1,5 +1,6 @@
 html, body {
 	font-size: 14px;
+	line-height: 28px;
 }
 
 svg {
@@ -15,14 +16,15 @@ nav ul {
 	}
 }
 
-article main {
+article main, p {
 	font-family: $font-body;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 }
 
 .current {
 	font-family: $font-body-b !important;
 }
+
 
 // *** headers ***
 h1, h2, h3 {
@@ -108,14 +110,32 @@ span {
 // ***  end inline text treatment ***
 
 
-// *** Block Text Options ***
-
 p {
 
 }
 
-blockquote, .quote {
+article.post.type-post {
+	h1 {
+		font-family: $font-body-b;
+		@extend %transitions;
+		font-size: 1.5rem;
+		font-weight: 100;
+		margin-top: 0 !important;
+		margin-bottom: 2.5rem;
+	}
+}
 
+blockquote, .quote {
+	& p:first-child{
+		padding-top: 2.5rem;
+	}
+	& p {
+		font-size: 1em;
+		font-family: $font-nav;
+		line-height: 1.4em;
+	}
+	margin-bottom: 2.5rem;
+	
 }
 
 // definition lists 

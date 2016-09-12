@@ -1,4 +1,4 @@
-nav ul, nav ul li, h1, a, ol.section-list li, ul.section-list li {
+nav ul, nav ul li, h1, a, article.post.type-post h1, ol.section-list li, ul.section-list li {
   transition: all 250ms ease-in-out; }
 
 .clear {
@@ -21,7 +21,8 @@ nav ul, nav ul li, h1, a, ol.section-list li, ul.section-list li {
   font-weight: normal;
   font-style: normal; }
 html, body {
-  font-size: 14px; }
+  font-size: 14px;
+  line-height: 28px; }
 
 svg {
   text-rendering: optimizeLegibility; }
@@ -29,9 +30,9 @@ svg {
 nav ul {
   font-family: "AkkuratStd-Mono"; }
 
-article main {
+article main, p {
   font-family: "Fakt-Normal";
-  font-size: 1.5em; }
+  font-size: 1.5rem; }
 
 .current {
   font-family: "Fakt-Bold" !important; }
@@ -60,6 +61,22 @@ h3 {
   font-size: 1.5rem;
   margin-bottom: 0; }
 
+article.post.type-post h1 {
+  font-family: "Fakt-Bold";
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-top: 0 !important;
+  margin-bottom: 2.5rem; }
+
+blockquote, .quote {
+  margin-bottom: 2.5rem; }
+  blockquote p:first-child, .quote p:first-child {
+    padding-top: 2.5rem; }
+  blockquote p, .quote p {
+    font-size: 1em;
+    font-family: "AkkuratStd-Mono";
+    line-height: 1.4em; }
+
 html {
   background: #bdb7b0;
   min-width: 100vw; }
@@ -73,7 +90,8 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -100; }
+  z-index: -100;
+  opacity: 0; }
 
 #primary {
   height: 100vh;
@@ -82,9 +100,16 @@ body {
   top: 0;
   right: 0;
   overflow: auto;
-  z-index: -200; }
+  z-index: -200;
+  opacity: 0; }
   #primary #main {
     padding: 50px 100px 50px 100px; }
+
+article.post.type-post img {
+  width: 100% !important;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 1rem; }
 
 .person-content img {
   width: 300px; }
@@ -144,7 +169,8 @@ nav ul {
 nav {
   background: #FFF;
   padding: 1.25em;
-  padding-bottom: .5em; }
+  padding-bottom: .5em;
+  opacity: 0; }
   nav img {
     margin-bottom: 2.5em;
     margin-right: 15px; }
