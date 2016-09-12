@@ -28,6 +28,10 @@ nav {
 	
 	section {
 		display:none;
+		
+		&.nav-section-content {
+			margin-top: 1em;
+		}
 	
 		h1 {
 			display: none;
@@ -35,9 +39,11 @@ nav {
 		main {
 			width: calc(100% - #{2*$nav-item-padding});
 			padding: 0 $nav-item-padding 0 $nav-item-padding;
-			font-size: 14px;
+			font-size: $font-mobile-body-size;
+			line-height: $font-mobile-line-height;
 			& p, h2, h3 {
-				font-size: 14px;
+				font-size: $font-mobile-body-size;
+				line-height: $font-mobile-line-height;
 			}
 			
 			ul, li {
@@ -61,12 +67,13 @@ nav {
 			min-height: 0;
 			
 			li {
-				line-height: 25px;
+				font-family: $font-body;
+				line-height: $font-mobile-li-line-height;
 			}
 			
 			div.link{
 				width: calc(100% - #{2*$nav-item-padding});
-				padding: $nav-item-padding $nav-item-padding $nav-item-padding/2 $nav-item-padding;
+				padding: $nav-item-padding $nav-item-padding $nav-item-padding $nav-item-padding;
 				&:hover {
 					cursor: pointer;
 					color: $type-alt;

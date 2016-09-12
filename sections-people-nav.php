@@ -1,4 +1,4 @@
-<section id="people-nav">
+<section id="people-nav" class = "nav-section-content">
 	<article class="section-content">
 		<h1 >People</h1>
 		<main>

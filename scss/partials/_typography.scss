@@ -1,6 +1,6 @@
 html, body {
-	font-size: 18px;
-	line-height: 28px;
+	font-size: $font-nav-size;
+	line-height: $font-nav-line-height;
 }
 
 svg {
@@ -11,14 +11,15 @@ nav ul {
 	font-family: $font-nav;
 	@extend %transitions;
 	
-	li {
+	li, li div {
 		@extend %transitions;
 	}
 }
 
 article main, p {
 	font-family: $font-body;
-	font-size: 1.2rem;
+	font-size: $font-body-size;
+	line-height: $font-body-line-height;
 }
 
 .current {
@@ -41,13 +42,15 @@ h1 {
 	font-size: 1em;
 	font-weight: 100;
 	margin-top: 3.5em !important;
+	margin-bottom: .75rem;
 }
 
 a {
 	color: $type-basic;
 	text-decoration: none;
 	&:hover {
-		color: $type-alt;
+		//color: $type-alt;
+		font-family: $font-body-b;
 	}
 	
 }

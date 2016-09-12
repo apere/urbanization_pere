@@ -26,8 +26,10 @@ ol, ul {
 			@extend %transitions;
 			font-weight: 500;
 			
-			&:hover {
-				color: $nav-background-alt;
+			
+			&:hover, a:hover {
+				font-family: $font-body-b;
+				color: #000;
 				
 				&.current {
 					color: #000;
@@ -35,6 +37,22 @@ ol, ul {
 				
 			}
 		}
+	}
+}
+
+#publics, #publics-nav {
+	ul {
+		li {
+			font-family: $font-nav;
+			font-size: 10pt;
+			line-height: 12pt;
+		}
+	}
+}
+
+#publics-nav {
+	ul {
+		margin-bottom: 1em;
 	}
 }
 

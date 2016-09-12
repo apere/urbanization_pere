@@ -1,4 +1,4 @@
-<section id="projects-nav">
+<section id="projects-nav" class = "nav-section-content">
 	<article class="section-content">
 		<h1>Projects</h1>
 		<main>

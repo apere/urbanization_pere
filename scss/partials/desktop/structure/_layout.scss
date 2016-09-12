@@ -37,7 +37,20 @@ html {
 			padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
 		}
 	}
-	
+}
+
+.single-post #primary #main {
+	@media only screen and (min-width: 1160px) {
+			padding: $nav-margin #{4*$nav-margin} $nav-margin #{2*$nav-margin};	
+		}
+		
+		@media only screen and (max-width: 1160px) and (min-width: 975px) {
+			padding: $nav-margin-m #{4*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};	
+		}
+		
+		@media only screen and (max-width: 975px)  {
+			padding: $nav-margin-m2 #{4*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+		}
 }
 
 article.post.type-post {

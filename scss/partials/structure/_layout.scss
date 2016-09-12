@@ -16,6 +16,10 @@ body {
 	display: none;
 }
 
+#main {
+	max-width: 900px;
+}
+
 article.post.type-post {
 	img {
 		width: 100% !important;
@@ -40,7 +44,7 @@ article.post.type-post {
 }
 
 h1 {
-	margin-bottom: 1em;
+	margin-bottom: .75em;
 	margin-top: 2em;
 }
 

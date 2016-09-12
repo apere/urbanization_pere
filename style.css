@@ -1,4 +1,4 @@
-nav ul, nav ul li, h1, a, article.post.type-post h1, ol.section-list li, ul.section-list li {
+nav ul, nav ul li, nav ul li div, h1, a, article.post.type-post h1, ol.section-list li, ul.section-list li {
   transition: all 250ms ease-in-out; }
 
 .clear {
@@ -38,8 +38,8 @@ nav ul, nav ul li, h1, a, article.post.type-post h1, ol.section-list li, ul.sect
   font-weight: normal;
   font-style: normal; }
 html, body {
-  font-size: 18px;
-  line-height: 28px; }
+  font-size: 14pt;
+  line-height: 22pt; }
 
 svg {
   text-rendering: optimizeLegibility; }
@@ -48,8 +48,9 @@ nav ul {
   font-family: "AkkuratStd-Mono"; }
 
 article main, p {
-  font-family: "Fakt-Medium";
-  font-size: 1.2rem; }
+  font-family: "Fakt-Normal";
+  font-size: 22pt;
+  line-height: 28pt; }
 
 .current {
   font-family: "Fakt-SemiBold" !important; }
@@ -58,13 +59,14 @@ h1 {
   font-family: "AkkuratStd-Mono";
   font-size: 1em;
   font-weight: 100;
-  margin-top: 3.5em !important; }
+  margin-top: 3.5em !important;
+  margin-bottom: .75rem; }
 
 a {
   color: #000;
   text-decoration: none; }
   a:hover {
-    color: #898989; }
+    font-family: "Fakt-SemiBold"; }
 
 h2 {
   font-family: "Fakt-SemiBold";
@@ -107,6 +109,9 @@ body {
 #primary {
   display: none; }
 
+#main {
+  max-width: 900px; }
+
 article.post.type-post img {
   width: 100% !important;
   height: auto;
@@ -120,7 +125,7 @@ article.post.type-post img {
   margin-top: 0; }
 
 h1 {
-  margin-bottom: 1em;
+  margin-bottom: .75em;
   margin-top: 2em; }
 
 section {
@@ -137,10 +142,19 @@ ol, ul {
     cursor: pointer; }
     ol.section-list li, ul.section-list li {
       font-weight: 500; }
-      ol.section-list li:hover, ul.section-list li:hover {
-        color: #dedad6; }
-        ol.section-list li:hover.current, ul.section-list li:hover.current {
+      ol.section-list li:hover, ol.section-list li a:hover, ul.section-list li:hover, ul.section-list li a:hover {
+        font-family: "Fakt-SemiBold";
+        color: #000; }
+        ol.section-list li:hover.current, ol.section-list li a:hover.current, ul.section-list li:hover.current, ul.section-list li a:hover.current {
           color: #000; }
+
+#publics ul li, #publics-nav ul li {
+  font-family: "AkkuratStd-Mono";
+  font-size: 10pt;
+  line-height: 12pt; }
+
+#publics-nav ul {
+  margin-bottom: 1em; }
 
 nav ul {
   list-style: none; }
@@ -165,14 +179,18 @@ nav {
   width: calc(100vw - 2.5em); }
   nav section {
     display: none; }
+    nav section.nav-section-content {
+      margin-top: 1em; }
     nav section h1 {
       display: none; }
     nav section main {
-      width: calc(100% - 2rem);
-      padding: 0 1rem 0 1rem;
-      font-size: 14px; }
+      width: calc(100% - 1rem);
+      padding: 0 0.5rem 0 0.5rem;
+      font-size: 14pt;
+      line-height: 16pt; }
       nav section main p, nav section main h2, nav section main h3 {
-        font-size: 14px; }
+        font-size: 14pt;
+        line-height: 16pt; }
       nav section main ul, nav section main li {
         border-top: 0; }
   nav img {
@@ -187,15 +205,16 @@ nav {
       border-top: 2px solid black;
       min-height: 0; }
       nav ul li li {
+        font-family: "Fakt-Normal";
         line-height: 25px; }
       nav ul li div.link {
-        width: calc(100% - 2rem);
-        padding: 1rem 1rem 0.5rem 1rem; }
+        width: calc(100% - 1rem);
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem; }
         nav ul li div.link:hover {
           cursor: pointer;
-          color: #898989; }
+          color: #959595; }
         nav ul li div.link.active {
-          color: #898989; }
+          color: #959595; }
 
 @media only screen and (min-width: 800px) {
   html {
@@ -214,7 +233,7 @@ nav {
   #primary {
     display: block;
     height: 100vh;
-    width: calc(100vw - 350px);
+    width: calc(100vw - 325px);
     position: absolute;
     top: 0;
     right: 0;
@@ -231,6 +250,16 @@ nav {
     #primary #main {
       padding: 25px 50px 25px 50px; } }
 
+@media only screen and (min-width: 800px) and (min-width: 1160px) {
+  .single-post #primary #main {
+    padding: 50px 200px 50px 100px; } }
+@media only screen and (min-width: 800px) and (max-width: 1160px) and (min-width: 975px) {
+  .single-post #primary #main {
+    padding: 40px 160px 40px 80px; } }
+@media only screen and (min-width: 800px) and (max-width: 975px) {
+  .single-post #primary #main {
+    padding: 25px 100px 25px 50px; } }
+
 @media only screen and (min-width: 800px) {
   .person-content img {
     width: 300px; }
@@ -246,16 +275,21 @@ nav {
     column-gap: 10px;
     column-rule: none; }
 
+  #publics ul li, #publics-nav ul li {
+    font-family: "AkkuratStd-Mono";
+    font-size: 14pt;
+    line-height: 22pt; }
+
   .nav-wrapper {
     position: fixed;
     height: calc(100vh - 100px);
     top: 50px;
     left: 50px;
-    width: 300px; }
+    width: 275px; }
     .nav-wrapper #gsd-logo {
       display: block;
       position: absolute;
-      left: 1rem;
+      left: 0.5rem;
       bottom: 0;
       width: 200px; }
 

@@ -9,3 +9,13 @@
 	column-gap: 10px;
 	column-rule: none;
 }
+
+#publics, #publics-nav {
+	ul {
+		li {
+			font-family: $font-nav;
+			font-size: $font-nav-size;
+			line-height: $font-nav-line-height;
+		}
+	}
+}
