@@ -1,3 +1,7 @@
+<div id="nav-mobile-logo">
+	<img id="office-logo-mobile" src="<?php echo get_bloginfo('template_directory');?>/assets/OFFICE_Logo_Final.svg">
+</div>
+
 <div class = "nav-wrapper">
 		<nav>
 			<img id="office-logo" src="<?php echo get_bloginfo('template_directory');?>/assets/OFFICE_Logo_Final.svg">

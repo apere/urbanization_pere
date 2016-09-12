@@ -1,4 +1,20 @@
-
+#nav-mobile-logo {
+	position: fixed;
+	top: 0;
+	left: 1.25em;
+	width: calc(100% - 2.5em);
+	z-index: 10000;
+	padding: 1.25em 0;
+	background-color: $nav-background-color;
+	border-bottom: 2px solid $type-basic;
+	cursor: pointer;
+	
+	img {
+		margin-bottom: 2.2em;
+		margin-right: 15px;
+		max-width: 250px;
+	}
+}
 
 .nav-wrapper {
 	position: absolute;
@@ -23,7 +39,6 @@ nav {
 	padding: 1.25em;
 	padding-bottom: .5em;
 	opacity: 0;
-	height: 100vh;
 	width: calc(100vw - 2.5em);
 	
 	section {
