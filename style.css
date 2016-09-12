@@ -147,8 +147,7 @@ nav {
   height: 100vh;
   width: calc(100vw - 2.5em); }
   nav section {
-    display: none;
-    margin-top: 1.5rem; }
+    display: none; }
     nav section h1 {
       display: none; }
     nav section main {
