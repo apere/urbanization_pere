@@ -8,14 +8,23 @@ body {
 	
 }
 
+#initial-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -100;
+}
+
 #primary {
 	height: 100vh;
 	width: calc(100vw - #{$nav-width + $nav-margin});
 	position:absolute;
 	top: 0;
 	right:0;
-	
 	overflow: auto;
+	z-index: -200;
 	
 	#main {
 		padding: $nav-margin #{2*$nav-margin} $nav-margin #{2*$nav-margin};	

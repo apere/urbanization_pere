@@ -39,7 +39,8 @@ article main {
 h1 {
   font-family: "AkkuratStd-Mono";
   font-size: 1em;
-  font-weight: 100; }
+  font-weight: 100;
+  margin-top: 3.5em !important; }
 
 a {
   color: #000;
@@ -66,13 +67,22 @@ html {
 body {
   margin: 0; }
 
+#initial-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100; }
+
 #primary {
   height: 100vh;
   width: calc(100vw - 350px);
   position: absolute;
   top: 0;
   right: 0;
-  overflow: auto; }
+  overflow: auto;
+  z-index: -200; }
   #primary #main {
     padding: 50px 100px 50px 100px; }
 

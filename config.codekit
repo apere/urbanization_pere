@@ -20,6 +20,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/imgs\/background-test.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 382189,
+		"inputAbbreviatedPath": "\/assets\/imgs\/background-test.jpg",
+		"outputAbbreviatedPath": "\/assets\/imgs\/background-test.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/jquery-3.1.0.min.js": {
 		"fileType": 64,
 		"ignore": 0,
