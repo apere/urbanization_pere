@@ -26,11 +26,15 @@ body {
 
 .person-content {
 	// do not put transition timing here (handled in JS)
-	
+	img {
+		width: 300px;
+	}
 }
 
-article {
-
+#publics {
+	ul {
+		margin-top: 0;
+	}
 }
 
 h1 {

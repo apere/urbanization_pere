@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){$("nav li").click(function(){})},!1);
+document.addEventListener("DOMContentLoaded",function(){var t=$("#primary");$("nav li").click(function(){var n=$(this).data("link"),o=$("#"+n),a=o.offset().top-50,i=$("#main").offset().top;a-=i,0!==a&&t.animate({scrollTop:a},"slow")})},!1);

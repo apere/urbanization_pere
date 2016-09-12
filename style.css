@@ -48,6 +48,14 @@ a {
     color: #dedad6; }
 
 h2 {
+  font-family: "Fakt-Bold";
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 0; }
+
+h3 {
+  font-family: "Fakt-Bold";
+  font-weight: normal;
   font-size: 1.5rem;
   margin-bottom: 0; }
 
@@ -67,6 +75,12 @@ body {
   overflow: auto; }
   #primary #main {
     padding: 50px 100px 50px 100px; }
+
+.person-content img {
+  width: 300px; }
+
+#publics ul {
+  margin-top: 0; }
 
 h1 {
   margin-bottom: 1em;
