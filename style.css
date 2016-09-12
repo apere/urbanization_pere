@@ -91,7 +91,7 @@ ol, ul {
         ol.section-list li:hover.current, ul.section-list li:hover.current {
           color: #000; }
 
-#people-list {
+#people-list, #project-list {
   -moz-column-count: 2;
   -moz-column-gap: 10px;
   -moz-column-rule: none;
