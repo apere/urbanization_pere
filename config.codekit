@@ -31,6 +31,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/imgs\/temp-mobile-hamburger.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3577,
+		"inputAbbreviatedPath": "\/assets\/imgs\/temp-mobile-hamburger.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/temp-mobile-hamburger.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/jquery-3.1.0.min.js": {
 		"fileType": 64,
 		"ignore": 0,

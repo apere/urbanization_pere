@@ -1,3 +1,7 @@
+<div id="mobile-post-head">
+	<img id="mobile-proj-hamburger" src="<?php echo get_bloginfo('template_directory');?>/assets/imgs/temp-mobile-hamburger.png">
+</div>
+
 <div id="nav-mobile-logo">
 	<img id="office-logo-mobile" src="<?php echo get_bloginfo('template_directory');?>/assets/OFFICE_Logo_Final.svg">
 </div>

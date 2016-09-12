@@ -3,8 +3,67 @@ html {
 	min-width: 100vw;
 }
 
+#mobile-post-head {
+	display: none;
+}
+
 body {
 	margin: 0;
+	
+	&.single.single-post {
+		@media only screen and (max-width: 800px) {
+			background: #FFF;
+			
+			#mobile-post-head {
+				display: block;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				background: $nav-background-color;
+				padding: $nav-padding/2 $nav-padding;
+				max-height: 1em;
+				img {
+					max-height: 1em;
+					line-height: 1em;
+					cursor: pointer;
+				}
+			}
+			
+			#primary {
+				margin-top: calc(1rem + #{$nav-padding/2});
+				display: block;
+				padding: $nav-padding;
+				
+				h1 {
+					margin-bottom: 1em;
+					font-size: $font-mobile-body-size;
+				}
+				
+				p {
+					font-size: $font-mobile-body-size;
+					line-height: $font-mobile-line-height;
+				}
+				
+				blockquote p:first-child, .quote p:first-child {
+					padding-top: 1em;
+				}
+				
+				blockquote {
+					font-size: $font-mobile-body-size - 2pt;
+					line-height: $font-mobile-line-height - 3pt;
+					margin-left: 1em;
+					margin-right: 1em;
+					margin-top: 0;
+					
+					p {
+						font-size: $font-mobile-body-size - 2pt;
+						line-height: $font-mobile-line-height - 2pt;
+					}
+				}
+			}
+		}
+	}
 	
 }
 
@@ -27,7 +86,6 @@ article.post.type-post {
 		margin:0 auto;
 		margin-bottom: 1rem;
 	}
-	
 }
 
 .person-content {

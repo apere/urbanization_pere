@@ -100,8 +100,48 @@ html {
   background: #FFF;
   min-width: 100vw; }
 
+#mobile-post-head {
+  display: none; }
+
 body {
   margin: 0; }
+  @media only screen and (max-width: 800px) {
+    body.single.single-post {
+      background: #FFF; }
+      body.single.single-post #mobile-post-head {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: #FFF;
+        padding: 0.625em 1.25em;
+        max-height: 1em; }
+        body.single.single-post #mobile-post-head img {
+          max-height: 1em;
+          line-height: 1em;
+          cursor: pointer; }
+      body.single.single-post #primary {
+        margin-top: calc(1rem + 0.625em);
+        display: block;
+        padding: 1.25em; }
+        body.single.single-post #primary h1 {
+          margin-bottom: 1em;
+          font-size: 14pt; }
+        body.single.single-post #primary p {
+          font-size: 14pt;
+          line-height: 17pt; }
+        body.single.single-post #primary blockquote p:first-child, body.single.single-post #primary .quote p:first-child {
+          padding-top: 1em; }
+        body.single.single-post #primary blockquote {
+          font-size: 12pt;
+          line-height: 14pt;
+          margin-left: 1em;
+          margin-right: 1em;
+          margin-top: 0; }
+          body.single.single-post #primary blockquote p {
+            font-size: 12pt;
+            line-height: 15pt; } }
 
 #initial-background {
   display: none; }
@@ -201,10 +241,10 @@ nav {
       width: calc(100% - 1rem);
       padding: 0 0.5rem 0 0.5rem;
       font-size: 14pt;
-      line-height: 16pt; }
+      line-height: 17pt; }
       nav section main p, nav section main h2, nav section main h3 {
         font-size: 14pt;
-        line-height: 16pt; }
+        line-height: 17pt; }
       nav section main ul, nav section main li {
         border-top: 0; }
   nav img {

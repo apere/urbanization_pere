@@ -36,7 +36,7 @@
 
 nav {
 	background: $nav-background-color;
-	padding: 1.25em;
+	padding: $nav-padding;
 	padding-bottom: .5em;
 	opacity: 0;
 	width: calc(100vw - 2.5em);

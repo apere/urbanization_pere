@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
 					opacity: "1"
 				},10, function() {	});
 	
+	if(window.innerWidth <= 800 && inPost.get().length > 0) {
+		$('.nav-wrapper, #nav-mobile-logo').css("display", "none");
+		$('#primary').css('display','block');
+	}
 	
 	if(inPost.get().length <= 0 && anchorIndex < 0){	// make sure premises is lined up 
 		secBack.scrollTop($('#premises').offset().top - 50);
@@ -38,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	
 	
-	$('#office-logo, #office-logo-mobile').click(function(){
+	$('#office-logo, #office-logo-mobile, #mobile-post-head img').click(function(){
 		var currURL = document.URL;
 		currURL = currURL.substr(0,currURL.split("/", 3).join("/").length + 1);
 		window.location.href = currURL;
