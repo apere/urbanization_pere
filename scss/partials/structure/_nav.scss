@@ -13,6 +13,9 @@
 		display: none;
 	}
 	
+	#office-logo {
+		cursor: pointer;
+	}
 }
 
 nav {
@@ -22,6 +25,27 @@ nav {
 	opacity: 0;
 	height: 100vh;
 	width: calc(100vw - 2.5em);
+	
+	section {
+		display:none;
+		margin-top: 1.5rem;
+		h1 {
+			display: none;
+		}
+		main {
+			width: calc(100% - #{2*$nav-item-padding});
+			padding: 0 $nav-item-padding 0 $nav-item-padding;
+			font-size: 14px;
+			& p, h2, h3 {
+				font-size: 14px;
+			}
+			
+			ul, li {
+				border-top: 0;
+			}
+			
+		}
+	}
 	img {
 		margin-bottom: 2.5em;
 		margin-right: 15px;
@@ -36,8 +60,12 @@ nav {
 			border-top: 2px solid black;	
 			min-height: 0;
 			
-			div{
-				width: 100%;
+			li {
+				line-height: 25px;
+			}
+			
+			div.link{
+				width: calc(100% - #{2*$nav-item-padding});
 				padding: $nav-item-padding $nav-item-padding $nav-item-padding/2 $nav-item-padding;
 				&:hover {
 					cursor: pointer;

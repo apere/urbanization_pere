@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	
 	if(inPost.get().length <= 0 && anchorIndex < 0){	// make sure premises is lined up 
-		secBack.scrollTop($('#premises').offset().top - 50 - $("#main").offset().top);
+		secBack.scrollTop($('#premises').offset().top - 50);
 	} 
 	
 	if(inPost.get().length <= 0 && anchorIndex < 0){ // in a post without an anchor?
@@ -44,9 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		window.location.href = currURL;
 	})
 	
-  $('nav li div').click(function() {
+  $('nav li div.link').click(function() {
 		var anchor = $(this).data("link");		
 		var aTag = $("#"+ anchor);
+		console.log(anchor);
 		
 		if(inPost.get().length <= 0){ // we are on the main page
 			var location = aTag.offset().top - 50;
@@ -54,19 +55,18 @@ document.addEventListener('DOMContentLoaded', function() {
 			location = location - off;
 
 			if(firstClick) {
-			if(location !== 0){
-				scroller.scrollTop(location);
-			}
-			initBack.animate({
-				opacity: "0"
-			},700, function() {
-				initBack.css('display', 'none');
-				firstClick = false;
-			});
-			secBack.animate({
-				opacity: "1"
-			},700, function() {	});
-
+				if(location !== 0){
+					scroller.scrollTop(location);
+				}
+				initBack.animate({
+					opacity: "0"
+				},700, function() {
+					initBack.css('display', 'none');
+					firstClick = false;
+				});
+				scroller.animate({
+					opacity: "1"
+				},700, function() {	});
 		} else {
 			if(location !== 0){
 				scroller.animate({scrollTop: location},'1000');

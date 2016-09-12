@@ -125,17 +125,6 @@ ol, ul {
         ol.section-list li:hover.current, ul.section-list li:hover.current {
           color: #000; }
 
-#people-list, #project-list {
-  -moz-column-count: 2;
-  -moz-column-gap: 10px;
-  -moz-column-rule: none;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 10px;
-  -webkit-column-rule: none;
-  column-count: 2;
-  column-gap: 10px;
-  column-rule: none; }
-
 nav ul {
   list-style: none; }
 
@@ -147,6 +136,8 @@ nav ul {
   width: 100%; }
   .nav-wrapper #gsd-logo {
     display: none; }
+  .nav-wrapper #office-logo {
+    cursor: pointer; }
 
 nav {
   background: #FFF;
@@ -155,6 +146,19 @@ nav {
   opacity: 0;
   height: 100vh;
   width: calc(100vw - 2.5em); }
+  nav section {
+    display: none;
+    margin-top: 1.5rem; }
+    nav section h1 {
+      display: none; }
+    nav section main {
+      width: calc(100% - 2rem);
+      padding: 0 1rem 0 1rem;
+      font-size: 14px; }
+      nav section main p, nav section main h2, nav section main h3 {
+        font-size: 14px; }
+      nav section main ul, nav section main li {
+        border-top: 0; }
   nav img {
     margin-bottom: 2.5em;
     margin-right: 15px;
@@ -166,13 +170,15 @@ nav {
       border: 0;
       border-top: 2px solid black;
       min-height: 0; }
-      nav ul li div {
-        width: 100%;
-        padding: 1em 1em 0.5em 1em; }
-        nav ul li div:hover {
+      nav ul li li {
+        line-height: 25px; }
+      nav ul li div.link {
+        width: calc(100% - 2rem);
+        padding: 1rem 1rem 0.5rem 1rem; }
+        nav ul li div.link:hover {
           cursor: pointer;
           color: #dedad6; }
-        nav ul li div.active {
+        nav ul li div.link.active {
           color: #dedad6; }
 
 @media only screen and (min-width: 800px) {
@@ -213,6 +219,17 @@ nav {
   .person-content img {
     width: 300px; }
 
+  #people-list, #project-list {
+    -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -moz-column-rule: none;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    -webkit-column-rule: none;
+    column-count: 2;
+    column-gap: 10px;
+    column-rule: none; }
+
   .nav-wrapper {
     position: fixed;
     height: calc(100vh - 100px);
@@ -222,7 +239,7 @@ nav {
     .nav-wrapper #gsd-logo {
       display: block;
       position: absolute;
-      left: 1em;
+      left: 1rem;
       bottom: 0;
       width: 200px; }
 

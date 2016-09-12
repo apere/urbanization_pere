@@ -3,20 +3,34 @@
 			<img id="office-logo" src="<?php echo get_bloginfo('template_directory');?>/assets/OFFICE_Logo_Final.svg">
 			<ul>
 				<li >
-					<div data-link="premises">Premises</div>
-				
+					<div data-link="premises" class="link">Premises</div>
+					<?php 
+						get_template_part('sections-premises-nav');
+					?>
 				</li>
 				<li >
-					<div data-link="positions">Positions</div>
+					<div data-link="positions" class="link">Positions</div>
+					<?php 
+						get_template_part('sections-positions-nav');
+					?>
 				</li>
 				<li >
-					<div data-link="projects">Projects</div>
+					<div data-link="projects" class="link">Projects</div>
+					<?php 
+						get_template_part('sections-projects-nav');
+					?>
 				</li>
 				<li >
-					<div data-link="people">People</div>
+					<div data-link="people" class="link">People</div>
+					<?php 
+						get_template_part('sections-people-nav');
+					?>
 				</li>
 				<li >
-					<div data-link="publics">Publics</div>
+					<div data-link="publics" class="link">Publics</div>
+					<?php 
+						get_template_part('sections-publics-nav');
+					?>
 				</li> 
 			</ul>
 		</nav>

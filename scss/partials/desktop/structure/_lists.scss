@@ -1,24 +1,11 @@
-// This is where you would put any styles for lists
-
-ul {
-	li {
-		
-	}
-}
-
-ol {
-	li {
-		
-	}
-}
-
-
-// *** definition lists ***
-dl {
-	dt {
-		
-	}
-	dd {
-		
-	}
+#people-list, #project-list {
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-moz-column-rule: none;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	-webkit-column-rule: none;
+	column-count: 2;
+	column-gap: 10px;
+	column-rule: none;
 }

@@ -48,13 +48,13 @@ jQuery(function($){
 						}
 						else if(lastClicked !== currentUrl) { // did we click the same one twice?
 							pContent.animate({
-									opacity: "toggle"
+									opacity: "0"
 							}, 500, function() {
 								
 								
 								pContent.html(outputs);
 								pContent.animate({
-									opacity: "toggle"
+									opacity: "1"
 								}, 600, function() {
 									
 								});
