@@ -38,7 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	
 	
-	
+	$('#office-logo').click(function(){
+		var currURL = document.URL;
+		currURL = currURL.substr(0,currURL.split("/", 3).join("/").length + 1);
+		window.location.href = currURL;
+	})
 	
   $('nav li').click(function() {
 		var anchor = $(this).data("link");		
