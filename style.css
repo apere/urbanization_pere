@@ -78,32 +78,17 @@ blockquote, .quote {
     line-height: 1.4em; }
 
 html {
-  background: #bdb7b0;
+  background: #FFF;
   min-width: 100vw; }
 
 body {
   margin: 0; }
 
 #initial-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -100;
-  opacity: 0; }
+  display: none; }
 
 #primary {
-  height: 100vh;
-  width: calc(100vw - 350px);
-  position: absolute;
-  top: 0;
-  right: 0;
-  overflow: auto;
-  z-index: -200;
-  opacity: 0; }
-  #primary #main {
-    padding: 50px 100px 50px 100px; }
+  display: none; }
 
 article.post.type-post img {
   width: 100% !important;
@@ -112,7 +97,7 @@ article.post.type-post img {
   margin-bottom: 1rem; }
 
 .person-content img {
-  width: 300px; }
+  width: 100%; }
 
 #publics ul {
   margin-top: 0; }
@@ -154,29 +139,26 @@ ol, ul {
 nav ul {
   list-style: none; }
 
-#office-logo {
-  cursor: pointer; }
-
 .nav-wrapper {
-  position: fixed;
-  height: calc(100vh - 100px);
-  top: 50px;
-  left: 50px;
-  width: 300px; }
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%; }
   .nav-wrapper #gsd-logo {
-    position: absolute;
-    left: 1em;
-    bottom: 0;
-    width: 200px; }
+    display: none; }
 
 nav {
   background: #FFF;
   padding: 1.25em;
   padding-bottom: .5em;
-  opacity: 0; }
+  opacity: 0;
+  height: 100vh;
+  width: calc(100vw - 2.5em); }
   nav img {
     margin-bottom: 2.5em;
-    margin-right: 15px; }
+    margin-right: 15px;
+    max-width: 250px; }
   nav ul {
     padding: 0;
     margin-bottom: 0; }
@@ -190,3 +172,59 @@ nav {
         color: #dedad6; }
       nav ul li.active {
         color: #dedad6; }
+
+@media only screen and (min-width: 800px) {
+  html {
+    background: #bdb7b0; }
+
+  #initial-background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+    opacity: 0; }
+
+  #primary {
+    display: block;
+    height: 100vh;
+    width: calc(100vw - 350px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: auto;
+    z-index: -200;
+    opacity: 0; } }
+  @media only screen and (min-width: 800px) and (min-width: 1160px) {
+    #primary #main {
+      padding: 50px 100px 50px 100px; } }
+  @media only screen and (min-width: 800px) and (max-width: 1160px) and (min-width: 975px) {
+    #primary #main {
+      padding: 40px 80px 40px 80px; } }
+  @media only screen and (min-width: 800px) and (max-width: 975px) {
+    #primary #main {
+      padding: 25px 50px 25px 50px; } }
+
+@media only screen and (min-width: 800px) {
+  .person-content img {
+    width: 300px; }
+
+  .nav-wrapper {
+    position: fixed;
+    height: calc(100vh - 100px);
+    top: 50px;
+    left: 50px;
+    width: 300px; }
+    .nav-wrapper #gsd-logo {
+      display: block;
+      position: absolute;
+      left: 1em;
+      bottom: 0;
+      width: 200px; }
+
+  nav {
+    opacity: 0;
+    height: auto;
+    width: auto; } }

@@ -1,5 +1,5 @@
 html {
-	background: $background-color;
+	background: $nav-background-color;
 	min-width: 100vw;
 }
 
@@ -9,30 +9,11 @@ body {
 }
 
 #initial-background {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: -100;
-	opacity: 0;
+	display: none ;
 }
 
 #primary {
-	height: 100vh;
-	width: calc(100vw - #{$nav-width + $nav-margin});
-	position:absolute;
-	top: 0;
-	right:0;
-	overflow: auto;
-	z-index: -200;
-	opacity: 0;
-	
-	#main {
-		padding: $nav-margin #{2*$nav-margin} $nav-margin #{2*$nav-margin};	
-		
-	}
-	
+	display: none;
 }
 
 article.post.type-post {
@@ -48,7 +29,7 @@ article.post.type-post {
 .person-content {
 	// do not put transition timing here (handled in JS)
 	img {
-		width: 300px;
+		width: 100%;
 	}
 }
 

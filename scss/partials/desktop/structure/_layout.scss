@@ -1,19 +1,55 @@
-body {
+html {
+	background: $background-color;
+}
+
+#initial-background {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -100;
+	opacity: 0;
+}
+
+#primary {
+	display:block;
+	height: 100vh;
+	width: calc(100vw - #{$nav-width + $nav-margin});
+	position:absolute;
+	top: 0;
+	right:0;
+	overflow: auto;
+	z-index: -200;
+	opacity: 0;
+	
+	#main {
+		@media only screen and (min-width: 1160px) {
+			padding: $nav-margin #{2*$nav-margin} $nav-margin #{2*$nav-margin};	
+		}
+		
+		@media only screen and (max-width: 1160px) and (min-width: 975px) {
+			padding: $nav-margin-m #{2*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};	
+		}
+		
+		@media only screen and (max-width: 975px)  {
+			padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+		}
+	}
 	
 }
 
-article {
+article.post.type-post {
+	img {
+
+	}
 	
 }
 
-section {
-	
+.person-content {
+	// do not put transition timing here (handled in JS)
+	img {
+		width: 300px;
+	}
 }
-
-figure {
-	
-}
-
-
-
-

@@ -1,4 +1,23 @@
+.nav-wrapper {
+	position: fixed;
+	height: calc(100vh - #{2*$nav-margin});
+	top: $nav-margin;
+	left: $nav-margin;
+	width: $nav-width;
+	
+	
+	#gsd-logo {
+		display: block;
+		position: absolute;
+		left: $nav-item-padding;
+		bottom: 0;
+		width: 200px;
+	}
+	
+}
+
 nav {
-	
-	
+	opacity: 0;
+	height: auto;
+	width: auto;
 }

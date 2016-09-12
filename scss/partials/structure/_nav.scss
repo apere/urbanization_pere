@@ -1,21 +1,16 @@
-#office-logo {
-	cursor: pointer;
-}
+
 
 .nav-wrapper {
-	position: fixed;
-	height: calc(100vh - #{2*$nav-margin});
-	top: $nav-margin;
-	left: $nav-margin;
-	width: $nav-width;
+	position: absolute;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	width: 100%;
 	
 	
 	
 	#gsd-logo {
-		position: absolute;
-		left: $nav-item-padding;
-		bottom: 0;
-		width: 200px;
+		display: none;
 	}
 	
 }
@@ -25,10 +20,12 @@ nav {
 	padding: 1.25em;
 	padding-bottom: .5em;
 	opacity: 0;
-	
+	height: 100vh;
+	width: calc(100vw - 2.5em);
 	img {
 		margin-bottom: 2.5em;
 		margin-right: 15px;
+		max-width: 250px;
 	}
 	ul {
 		padding: 0;
