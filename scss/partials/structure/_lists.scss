@@ -38,6 +38,18 @@ ol, ul {
 	}
 }
 
+#people-list {
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-moz-column-rule: none;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	-webkit-column-rule: none;
+	column-count: 2;
+	column-gap: 10px;
+	column-rule: none;
+}
+
 nav {
 	ul {
 		list-style: none;
