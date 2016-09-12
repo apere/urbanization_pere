@@ -41,7 +41,7 @@ h1 {
 	@extend %transitions;
 	font-size: 1em;
 	font-weight: 100;
-	margin-top: 3.5em !important;
+	margin-top: 3em !important;
 	margin-bottom: .75rem;
 }
 
@@ -117,7 +117,7 @@ p {
 
 }
 
-article.post.type-post {
+article.post.type-post 	{
 	h1 {
 		font-family: $font-body-b;
 		@extend %transitions;

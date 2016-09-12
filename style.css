@@ -49,8 +49,8 @@ nav ul {
 
 article main, p {
   font-family: "Fakt-Normal";
-  font-size: 22pt;
-  line-height: 28pt; }
+  font-size: 18pt;
+  line-height: 22pt; }
 
 .current {
   font-family: "Fakt-SemiBold" !important; }
@@ -59,7 +59,7 @@ h1 {
   font-family: "AkkuratStd-Mono";
   font-size: 1em;
   font-weight: 100;
-  margin-top: 3.5em !important;
+  margin-top: 3em !important;
   margin-bottom: .75rem; }
 
 a {
@@ -260,7 +260,7 @@ nav {
       min-height: 0; }
       nav ul li li {
         font-family: "Fakt-Normal";
-        line-height: 25px; }
+        line-height: 22px; }
       nav ul li div.link {
         width: calc(100% - 1rem);
         padding: 0.5rem 0.5rem 0.5rem 0.5rem; }
