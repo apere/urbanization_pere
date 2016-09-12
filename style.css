@@ -103,6 +103,12 @@ html {
 #mobile-post-head {
   display: none; }
 
+.category-publics blockquote {
+  margin-left: 0;
+  margin-top: 0; }
+  .category-publics blockquote p {
+    padding-top: 0; }
+
 body {
   margin: 0; }
   @media only screen and (max-width: 800px) {
@@ -188,11 +194,6 @@ ol, ul {
         ol.section-list li:hover.current, ol.section-list li a:hover.current, ul.section-list li:hover.current, ul.section-list li a:hover.current {
           color: #000; }
 
-#publics ul li, #publics-nav ul li {
-  font-family: "AkkuratStd-Mono";
-  font-size: 10pt;
-  line-height: 12pt; }
-
 #publics-nav ul {
   margin-bottom: 1em; }
 
@@ -234,7 +235,8 @@ nav {
   nav section {
     display: none; }
     nav section.nav-section-content {
-      margin-top: 1em; }
+      margin-top: 0;
+      margin-bottom: 1.5em; }
     nav section h1 {
       display: none; }
     nav section main {
@@ -330,8 +332,8 @@ nav {
     column-rule: none; }
 
   #publics ul li, #publics-nav ul li {
-    font-family: "AkkuratStd-Mono";
-    font-size: 14pt;
+    font-family: "Fakt-Normal";
+    font-size: 18pt;
     line-height: 22pt; }
 
   #nav-mobile-logo {

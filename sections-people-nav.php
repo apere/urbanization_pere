@@ -1,5 +1,5 @@
 <section id="people-nav" class = "nav-section-content">
-	<article class="section-content">
+	<article class="nav-section-content">
 		<h1 >People</h1>
 		<main>
 			

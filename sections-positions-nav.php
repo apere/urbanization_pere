@@ -1,5 +1,5 @@
 <section id="positions-nav" class = "nav-section-content">
-	<article class="section-content">
+	<article class="nav-section-content">
 		<h1>Positions</h1>
 		<main>
 			<p>
