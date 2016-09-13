@@ -187,6 +187,9 @@ section {
 p {
   margin: 0 0 1em 0; }
 
+.issuuembed div div:nth-child(2) {
+  display: none !important; }
+
 ol, ul {
   list-style: none;
   padding-left: 0;

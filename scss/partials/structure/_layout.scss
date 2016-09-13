@@ -132,3 +132,11 @@ figure {
 aside {
 
 }
+
+
+// Hide parts of the pdf viewer
+.issuuembed div {
+	div:nth-child(2) {
+		display: none !important;
+	}
+}
