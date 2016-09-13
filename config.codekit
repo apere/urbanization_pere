@@ -53,6 +53,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/imgs\/TEST IMAGE.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.08542e+06,
+		"inputAbbreviatedPath": "\/assets\/imgs\/TEST IMAGE.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/TEST IMAGE.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/imgs\/test.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.19168e+06,
+		"inputAbbreviatedPath": "\/assets\/imgs\/test.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/test.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/imgs\/test2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 762876,
+		"inputAbbreviatedPath": "\/assets\/imgs\/test2.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/test2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/imgs\/v2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.32378e+06,
+		"inputAbbreviatedPath": "\/assets\/imgs\/v2.png",
+		"outputAbbreviatedPath": "\/assets\/imgs\/v2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/jquery-3.1.0.min.js": {
 		"fileType": 64,
 		"ignore": 0,

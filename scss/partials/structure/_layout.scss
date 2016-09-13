@@ -79,6 +79,9 @@ body {
 
 #initial-background {
 	display: none ;
+	background-repeat: none;
+	background-position: left bottom;
+	background-size: cover;
 }
 
 #primary {
