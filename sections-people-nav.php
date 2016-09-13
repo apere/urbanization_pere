@@ -3,7 +3,7 @@
 		<h1 >People</h1>
 		<main>
 			<ul id="people-list" class = "section-list">
-		<?php query_posts($query_string . "&order=ASC"); ?>
+		<?php query_posts($query_string . "&order=ASC&posts_per_page=200"); ?>
 		<?php if ( have_posts() ) : ?>
 			<?php
 				while ( have_posts() ) : the_post();
