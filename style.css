@@ -128,16 +128,16 @@ body {
         left: 0;
         width: 100vw;
         background: #FFF;
-        padding: 0.625em 1.25em;
+        padding: 0.375em 0.75em;
         max-height: 1em; }
         body.single.single-post #mobile-post-head img {
           max-height: 1em;
           line-height: 1em;
           cursor: pointer; }
       body.single.single-post #primary {
-        margin-top: calc(1rem + 0.625em);
+        margin-top: calc(1rem + 0.375em);
         display: block;
-        padding: 1.25em; }
+        padding: 0.75em; }
         body.single.single-post #primary h1 {
           margin-bottom: 1em;
           font-size: 14pt; }
@@ -210,7 +210,7 @@ nav ul {
 #nav-mobile-logo {
   position: fixed;
   top: 0;
-  left: 1.25em;
+  left: .75em;
   width: calc(100% - 2.5em);
   z-index: 10000;
   padding: 1.25em 0;
@@ -218,8 +218,8 @@ nav ul {
   border-bottom: 2px solid #000;
   cursor: pointer; }
   #nav-mobile-logo img {
-    margin-bottom: 2.2em;
-    margin-right: 15px;
+    margin-bottom: 2em;
+    padding-right: 15px;
     max-width: 250px;
     width: 100%; }
 
@@ -236,7 +236,7 @@ nav ul {
 
 nav {
   background: #FFF;
-  padding: 1.25em;
+  padding: 0.75em;
   padding-bottom: .5em;
   opacity: 0;
   width: calc(100vw - 2.5em); }
@@ -261,7 +261,7 @@ nav {
     margin-bottom: 2.5em;
     margin-right: 15px;
     max-width: 250px;
-    width: 100%; }
+    width: calc(100% - 15px); }
   nav ul {
     padding: 0;
     margin-bottom: 0; }

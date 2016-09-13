@@ -1,7 +1,7 @@
 #nav-mobile-logo {
 	position: fixed;
 	top: 0;
-	left: 1.25em;
+	left: .75em;
 	width: calc(100% - 2.5em);
 	z-index: 10000;
 	padding: 1.25em 0;
@@ -10,8 +10,8 @@
 	cursor: pointer;
 	
 	img {
-		margin-bottom: 2.2em;
-		margin-right: 15px;
+		margin-bottom: 2em;
+		padding-right: 15px;
 		max-width: 250px;
 		width: 100%;
 	}
@@ -73,7 +73,7 @@ nav {
 		margin-bottom: 2.5em;
 		margin-right: 15px;
 		max-width: 250px;
-		width: 100%;
+		width: calc(100% - 15px);
 	}
 	ul {
 		padding: 0;

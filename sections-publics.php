@@ -2,6 +2,7 @@
 	<article class="section-content">
 		<h1>Publics</h1>
 		<main>
+			<?php query_posts($query_string . "&order=ASC"); ?>
 			<?php if ( have_posts() ) : ?>
 			<ul id="public-list" class = "section-list">
 			<?php

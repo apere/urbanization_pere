@@ -20,6 +20,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/imgs\/background-test-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 382189,
+		"inputAbbreviatedPath": "\/assets\/imgs\/background-test-1.jpg",
+		"outputAbbreviatedPath": "\/assets\/imgs\/background-test-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/imgs\/background-test.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

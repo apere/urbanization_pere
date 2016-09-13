@@ -3,6 +3,7 @@
 		<h1>Projects</h1>
 		<main>
 			<ul id="project-list" class = "section-list">
+			<?php query_posts($query_string . "&order=ASC"); ?>
 			<?php if ( have_posts() ) : ?>
 			<?php
 				while ( have_posts() ) : the_post();
