@@ -147,3 +147,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+function change_wp_search_size($queryVars) {
+	$queryVars['posts_per_page'] = 300; // Change 10 to the number of posts you would like to show
+	$queryVars['order'] = 'ASC';
+	return $queryVars; // Return our modified query variables
+}
+add_filter('request', 'change_wp_search_size'); // Hook our custom function onto the request filter

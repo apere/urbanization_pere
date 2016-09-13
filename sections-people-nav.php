@@ -3,7 +3,6 @@
 		<h1 >People</h1>
 		<main>
 			<ul id="people-list" class = "section-list">
-	
 		<?php if ( have_posts() ) : ?>
 			<?php
 				while ( have_posts() ) : the_post();
