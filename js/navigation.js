@@ -23,10 +23,17 @@ document.addEventListener('DOMContentLoaded', function() {
 					opacity: "1"
 				},10, function() {	});
 	
-//	if(initBack.get().length > 0 && initBack.css("display") != "none") { // slideshow
-//		theSlideshow = setInterval(slideshow, 20000);
-//		console.log('set interval)');
-//	}
+	var entryHeader = $('.entry-header');
+	
+	if(window.innerWidth > 800) {
+		if(entryHeader.hasClass("bright-blue-background")) {
+			$('html').css('background','#5fa7e5' );
+		} else if(entryHeader.hasClass("light-blue-background")) {
+			$('html').css('background','#dae5f4' );
+		} else if(entryHeader.hasClass("beige-background")) {
+			$('html').css('background','#dedad6' );
+		}
+	}	
 	
 	if(window.innerWidth <= 800 && inPost.get().length > 0) {
 		$('.nav-wrapper, #nav-mobile-logo').css("display", "none");
