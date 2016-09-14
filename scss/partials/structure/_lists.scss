@@ -26,11 +26,13 @@ ol, ul {
 			@extend %transitions;
 			font-weight: 500;
 			
-			
 			&:hover, a:hover {
 				font-weight: 800;
 				color: #000;
-				
+				&.no-content {
+					font-weight: 500;
+					cursor: initial ! important;
+				}
 				&.current {
 					color: #000;
 				}

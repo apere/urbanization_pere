@@ -207,6 +207,9 @@ ol, ul {
       ol.section-list li:hover, ol.section-list li a:hover, ul.section-list li:hover, ul.section-list li a:hover {
         font-weight: 800;
         color: #000; }
+        ol.section-list li:hover.no-content, ol.section-list li a:hover.no-content, ul.section-list li:hover.no-content, ul.section-list li a:hover.no-content {
+          font-weight: 500;
+          cursor: initial !important; }
         ol.section-list li:hover.current, ol.section-list li a:hover.current, ul.section-list li:hover.current, ul.section-list li a:hover.current {
           color: #000; }
 

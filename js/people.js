@@ -17,6 +17,7 @@ jQuery(function($){
 			var pContent = $('.person-content');
 			currClickedElement = $(this);
 		
+		if(!currClickedElement.hasClass('no-content')) {		
 			if(lastClickedElement && !currClickedElement.hasClass('current')) {
 				lastClickedElement.removeClass('current');
 			}
@@ -66,6 +67,8 @@ jQuery(function($){
 						open = true;
 					}
 			});
+		}
 	});
+	
 	
 });
