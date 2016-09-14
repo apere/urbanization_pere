@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
 					opacity: "1"
 				},10, function() {	});
 	
-	if(initBack.get().length > 0 && initBack.css("display") != "none") {
-		theSlideshow = setInterval(slideshow, 20000);
-		console.log('set interval)');
-	}
+//	if(initBack.get().length > 0 && initBack.css("display") != "none") { // slideshow
+//		theSlideshow = setInterval(slideshow, 20000);
+//		console.log('set interval)');
+//	}
 	
 	if(window.innerWidth <= 800 && inPost.get().length > 0) {
 		$('.nav-wrapper, #nav-mobile-logo').css("display", "none");
@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		initBack.animate({
 					opacity: "1"
 				},2000, function() {	});
-		initBack.css("background-image", "url(" + templateUrl + "/assets/imgs/test.png)");
+		var rand = Math.floor(Math.random()*imgs.length);
+		initBack.css("background-image","url("+ imURL + imgs[rand] + ")");
 	} else {
 		initBack.css("display", "none");
 		secBack.animate({
