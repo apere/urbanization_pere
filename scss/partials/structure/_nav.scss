@@ -92,9 +92,10 @@ nav {
 			div.link{
 				width: calc(100% - #{2*$nav-item-padding});
 				padding: $nav-item-padding $nav-item-padding $nav-item-padding $nav-item-padding;
+				font-weight: 500;
 				&:hover {
 					cursor: pointer;
-					color: $type-alt;
+					font-weight: 800;
 				}
 			
 				&.active {
