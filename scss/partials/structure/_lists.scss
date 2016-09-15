@@ -23,7 +23,7 @@ ol, ul {
 	&.section-list {
 		cursor: pointer;
 		li {
-			@extend %transitions;
+			transition: all 250ms ease-in-out;
 			font-weight: 500;
 			
 			&:hover, a:hover {
@@ -50,7 +50,8 @@ ol, ul {
 	}
 }
 
-#people-list, #project-list {
+#people-list {
+	margin-bottom: 1.5em;
 }
 
 nav {

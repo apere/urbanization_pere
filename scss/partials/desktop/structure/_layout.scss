@@ -26,7 +26,7 @@ html {
 	
 	#main {
 		@media only screen and (min-width: 1160px) {
-			padding: $nav-margin #{2*$nav-margin} $nav-margin #{2*$nav-margin};	
+			padding: $nav-margin #{3*$nav-margin + 15px} $nav-margin #{2*$nav-margin};	
 		}
 		
 		@media only screen and (max-width: 1160px) and (min-width: 975px) {
@@ -36,6 +36,7 @@ html {
 		@media only screen and (max-width: 975px)  {
 			padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
 		}
+		padding-bottom: 30vh !important;
 	}
 }
 
