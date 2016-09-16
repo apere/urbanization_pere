@@ -19,6 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
 	var imURL = templateUrl + "/assets/imgs/";
 	var imgs = ["test.png", "test2.png" ];
 	
+	var ua = navigator.userAgent.toLowerCase(); 
+	if (ua.indexOf('safari') != -1) { 
+		if (ua.indexOf('chrome') > -1) {
+			
+		} else {
+			$('html').addClass('using-safari');
+		}
+	}
+	
 	navBar.animate({
 					opacity: "1"
 				},10, function() {	});
@@ -57,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			},1000, function() {	});	
 	}
 	
-	$('#people-list.section-list li, .section-list li a, div.link').hover(function() {
+	$('#people-list.section-list li, .section-list li a').hover(function() {
 		var Text = $(this);
 		if(!Text.hasClass('no-content')){
 			Text.css({'font-weight':500});
@@ -69,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		
 	});
 	
-	$('#people-list.section-list li, .section-list li a, div.link').mouseout(function() {
+	$('#people-list.section-list li, .section-list li a').mouseout(function() {
 		var Text2 = $(this);
 		if(!Text2.hasClass('no-content')){
 			setTimeout(function(){ Text2.css({'font-weight':800})},30);

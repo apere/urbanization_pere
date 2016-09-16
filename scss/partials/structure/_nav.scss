@@ -1,3 +1,38 @@
+/* Safari 9 */
+
+.using-safari
+{ 
+  nav {
+
+	ul {
+		li {
+
+			div.link{
+
+				text-shadow:
+				 -1px -.25px 0 $nav-background-color,  
+					.25px -.25px 0 $nav-background-color,
+					-.25px .25px 0 $nav-background-color,
+					 .25px .25px 0 $nav-background-color;
+				
+				&:hover {
+					//font-weight: 800;
+					text-shadow:
+				 -1px -.25px 0 $type-basic,  
+					.25px -.25px 0 $type-basic,
+					-.25px .25px 0 $type-basic,
+					 .25px .25px 0 $type-basic;
+				}
+			
+	
+			}
+			
+		}
+	}
+}
+
+}
+
 #nav-mobile-logo {
 	position: fixed;
 	top: 0;
@@ -98,13 +133,25 @@ nav {
 			}
 			
 			div.link{
+				transition: text-shadow 0.5s ease;
 				width: calc(100% - #{2*$nav-item-padding});
 				padding: $nav-item-padding $nav-item-padding $nav-item-padding $nav-item-padding;
 				font-weight: 500;
 				cursor: pointer;
+				//font-weight: 500;
+				text-shadow:
+				 -.25px -.25px 0 $nav-background-color,  
+					.25px -.25px 0 $nav-background-color,
+					-.25px .25px 0 $nav-background-color,
+					 .25px .25px 0 $nav-background-color;
+				
 				&:hover {
-					
 					//font-weight: 800;
+					text-shadow:
+				 -.25px -.25px 0 $type-basic,  
+					.25px -.25px 0 $type-basic,
+					-.25px .25px 0 $type-basic,
+					 .25px .25px 0 $type-basic;
 				}
 			
 				&.active {
