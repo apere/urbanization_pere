@@ -95,7 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
 					window.clearTimeout(theSlideshow);
 			} else {
 				if(location !== 0){
-					scroller.animate({scrollTop: location},'1000');
+					scroller.animate({scrollTop: location},'1000', 'easeOutCirc', function() {
+					});
 				}		
 			}
 			} else { // we're on a project page
