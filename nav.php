@@ -1,5 +1,5 @@
 <div id="mobile-post-head">
-	<img id="mobile-proj-hamburger" src="<?php echo get_bloginfo('template_directory');?>/assets/imgs/temp-mobile-hamburger.png">
+	<img id="mobile-proj-hamburger" src="<?php echo get_bloginfo('template_directory');?>/assets/imgs/mobile-logo.svg">
 </div>
 
 <div id="nav-mobile-logo">

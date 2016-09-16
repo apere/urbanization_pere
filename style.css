@@ -239,6 +239,12 @@ nav ul {
     max-width: 250px;
     width: 100%; }
 
+#mobile-proj-hamburger {
+  width: 47px; }
+
+#mobile-post-head {
+  line-height: 1em; }
+
 .nav-wrapper {
   position: absolute;
   height: 100vh;
