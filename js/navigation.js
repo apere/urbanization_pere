@@ -57,6 +57,28 @@ document.addEventListener('DOMContentLoaded', function() {
 			},1000, function() {	});	
 	}
 	
+	$('#people-list.section-list li, .section-list li a, div.link').hover(function() {
+		var Text = $(this);
+		if(!Text.hasClass('no-content')){
+			Text.css({'font-weight':500});
+			setTimeout(function(){ Text.css({'font-weight':600})},30);
+			setTimeout(function(){ Text.css({'font-weight':700})},60);
+			setTimeout(function(){ Text.css({'font-weight':800})},90);
+			setTimeout(function(){ Text.css({'font-weight':900})},120);
+		}
+		
+	});
+	
+	$('#people-list.section-list li, .section-list li a, div.link').mouseout(function() {
+		var Text2 = $(this);
+		if(!Text2.hasClass('no-content')){
+			setTimeout(function(){ Text2.css({'font-weight':800})},30);
+			setTimeout(function(){ Text2.css({'font-weight':700})},60);
+			setTimeout(function(){ Text2.css({'font-weight':600})},90);
+			setTimeout(function(){ Text2.css({'font-weight':500})},120);
+		}
+	});
+	
 	
 	
 	$('#office-logo, #office-logo-mobile, #mobile-post-head img').click(function(){

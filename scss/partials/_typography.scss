@@ -1,3 +1,7 @@
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
 html, body {
 	font-size: $font-nav-size;
 	line-height: $font-nav-line-height;
@@ -52,7 +56,7 @@ a {
 	&:hover {
 		//color: $type-alt;
 		//font-family: $font-body-b;
-		font-weight: 800;
+		//font-weight: 800;
 	}
 	
 }

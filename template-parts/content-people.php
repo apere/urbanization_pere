@@ -10,7 +10,7 @@
 ?>
 
 	<?php if(has_category('People')): ?>
-		<li data-posturl="<?php echo(get_permalink()) ?>" class="<?php if( $post->post_content == "" ) {
+		<li data-posturl="<?php echo(the_title()) ?>" data-posturl="<?php echo(get_permalink()) ?>" class="<?php if( $post->post_content == "" ) {
     echo "no-content"; }?>">
 				<?php the_title() ?>
 		</li>

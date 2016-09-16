@@ -101,9 +101,10 @@ nav {
 				width: calc(100% - #{2*$nav-item-padding});
 				padding: $nav-item-padding $nav-item-padding $nav-item-padding $nav-item-padding;
 				font-weight: 500;
+				cursor: pointer;
 				&:hover {
-					cursor: pointer;
-					font-weight: 800;
+					
+					//font-weight: 800;
 				}
 			
 				&.active {

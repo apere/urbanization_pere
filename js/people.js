@@ -14,6 +14,9 @@ jQuery(function($){
 	$('#people-list li').click(function(e){
 			e.preventDefault();
 			var currentUrl = $(this).data('posturl');
+			console.log(currentUrl);
+			currentUrl = currentUrl.split(" ").join("-");
+			console.log(currentUrl);
 			var pContent = $('.person-content');
 			currClickedElement = $(this);
 		
