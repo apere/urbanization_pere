@@ -161,3 +161,8 @@ aside {
 		display: none !important;
 	}
 }
+
+// hide next and previous posts on mobile
+.next-post, .prev-post {
+	//display: none;
+}
