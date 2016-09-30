@@ -224,6 +224,31 @@ document.addEventListener('DOMContentLoaded', function() {
 //	}
 //	
 	
+	
+	
+	$( "html" ).on( "swipeleft", function() {
+		if(inPost.get().length > 0) {
+			var prev = $('body').find('a[rel=prev]');
+			var url = prev.attr("href");
+			if(url !== undefined) {
+				window.location.href = url;
+			}
+			
+			console.log(url);
+		}
+	} );
+	
+	$( "html" ).on( "swiperight", function() {
+		if(inPost.get().length > 0) {
+			var next = $('body').find('a[rel=next]');
+			var url = next.attr("href");
+			if(url !== undefined) {
+				window.location.href = url;
+			}
+			console.log(url);
+		}
+	} );
+	
 }, false);
 
 

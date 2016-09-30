@@ -17,6 +17,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/jquery-3.1.0.min.js" ></script>
 <script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/jquery-ui.js" ></script>
+<script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/jquery.event.move.js" ></script>
+<script type="text/javascript" src="<?php echo get_bloginfo('template_directory');?>/js/jquery.event.swipe.js" ></script>
 <?php wp_head(); ?>
 <script type="text/javascript">
 	var templateUrl = '<?= get_bloginfo("template_url"); ?>';
