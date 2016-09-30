@@ -243,8 +243,10 @@ nav ul {
 /* Safari 9 */
 .using-safari nav ul li div.link {
   text-shadow: -1px -0.25px 0 #FFF, 0.25px -0.25px 0 #FFF, -0.25px 0.25px 0 #FFF, 0.25px 0.25px 0 #FFF; }
-  .using-safari nav ul li div.link:hover {
+  .using-safari nav ul li div.link:hover:not(.active) {
     text-shadow: -1px -0.25px 0 #000, 0.25px -0.25px 0 #000, -0.25px 0.25px 0 #000, 0.25px 0.25px 0 #000; }
+  .using-safari nav ul li div.link.active {
+    font-weight: 800; }
 
 #nav-mobile-logo {
   position: fixed;

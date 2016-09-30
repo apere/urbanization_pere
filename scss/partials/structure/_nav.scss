@@ -15,13 +15,17 @@
 					-.25px .25px 0 $nav-background-color,
 					 .25px .25px 0 $nav-background-color;
 				
-				&:hover {
+				&:hover:not(.active) {
 					//font-weight: 800;
 					text-shadow:
 				 -1px -.25px 0 $type-basic,  
 					.25px -.25px 0 $type-basic,
 					-.25px .25px 0 $type-basic,
 					 .25px .25px 0 $type-basic;
+				}
+				
+				&.active {
+					font-weight: 800;
 				}
 			
 	
