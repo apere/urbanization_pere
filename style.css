@@ -214,6 +214,9 @@ p {
 .issuuembed div div:nth-child(2) {
   display: none !important; }
 
+.next-post, .prev-post {
+  display: none; }
+
 ol, ul {
   list-style: none;
   padding-left: 0;
