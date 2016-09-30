@@ -33,27 +33,47 @@ document.addEventListener('DOMContentLoaded', function() {
 				},10, function() {	});
 	
 	var entryHeader = $('.entry-header');
+	var windowWidth = window.innerWidth;
 	
-	if(window.innerWidth > 800) {
+	// check for class & set background color if it has the appropriate class
+	if(windowWidth > 800) { // desktop
 		if(entryHeader.hasClass("bright-blue-background")) {
 			$('html').css('background','#5fa7e5' );
 		} else if(entryHeader.hasClass("light-blue-background")) {
 			$('html').css('background','#dae5f4' );
 		} else if(entryHeader.hasClass("beige-background")) {
 			$('html').css('background','#dedad6' );
-		}
-	}	
+		} else if(entryHeader.hasClass("dark-brown-background")) {
+			$('html').css('background','#d0cbc7' );
+		} 
+	}	else { // mobile
+		if(entryHeader.hasClass("bright-blue-background")) {
+			$('#primary').css('background','#5fa7e5' );
+		} else if(entryHeader.hasClass("light-blue-background")) {
+			$('#primary').css('background','#dae5f4' );
+		} else if(entryHeader.hasClass("beige-background")) {
+			$('#primary').css('background','#dedad6' );
+		} else if(entryHeader.hasClass("dark-brown-background")) {
+			$('#primary').css('background','#d0cbc7' );
+		} 
+	}
 	
-	if(window.innerWidth <= 800 && inPost.get().length > 0) {
+	var inPostLength = inPost.get().length;
+	
+	// mobile/non-mobile
+	if(windowWidth <= 800 && inPostLength > 0) {
 		$('.nav-wrapper, #nav-mobile-logo').css("display", "none");
 		$('#primary').css('display','block');
 	}
 	
-	if(inPost.get().length <= 0 && anchorIndex < 0){	// make sure premises is lined up 
+	// make sure premises is lined up if not in post
+	if(inPostLength <= 0 && anchorIndex < 0){	
 		secBack.scrollTop($('#premises').offset().top - 50);
 	} 
 	
-	if(inPost.get().length <= 0 && anchorIndex < 0){ // in a post without an anchor?
+	
+	// in a post without an anchor?
+	if(inPostLength <= 0 && anchorIndex < 0){
 		initBack.animate({
 					opacity: "1"
 				},2000, function() {	});
@@ -66,51 +86,51 @@ document.addEventListener('DOMContentLoaded', function() {
 			},1000, function() {	});	
 	}
 	
-	$('#people-list.section-list li, .section-list li a').hover(function() {
-		var Text = $(this);
-		if(!Text.hasClass('no-content')){
-			Text.css({'font-weight':500});
-			setTimeout(function(){ Text.css({'font-weight':600})},30);
-			setTimeout(function(){ Text.css({'font-weight':700})},60);
-			setTimeout(function(){ Text.css({'font-weight':800})},90);
-			setTimeout(function(){ Text.css({'font-weight':900})},120);
-		}
-		
+	// scroll & highlight nav
+	var sections = document.body.querySelectorAll('section[id]:not(.nav-section-content)');
+	var numSections = sections.length;
+	
+	scroller.scroll(function() {
+		if(windowWidth > 800 && !firstClick) {
+			var current = $(sections[0]);
+			for(var i = 0; i <numSections; i++){
+				var temp = $(sections[i]);
+				if(temp.offset().top <=70) {
+					current = temp;
+				}
+			}
+			var currNav = $('nav').find("[data-link='" + current.attr('id') + "']");
+			if(!currNav.hasClass('active')) {
+				$('nav .link.active').removeClass('active');
+				currNav.addClass('active');
+			}
+		}		
 	});
 	
-	$('#people-list.section-list li, .section-list li a').mouseout(function() {
-		var Text2 = $(this);
-		if(!Text2.hasClass('no-content')){
-			setTimeout(function(){ Text2.css({'font-weight':800})},30);
-			setTimeout(function(){ Text2.css({'font-weight':700})},60);
-			setTimeout(function(){ Text2.css({'font-weight':600})},90);
-			setTimeout(function(){ Text2.css({'font-weight':500})},120);
-		}
-	});
 	
 	
-	
+	// clicking office logo returns to the 'landing page'
 	$('#office-logo, #office-logo-mobile, #mobile-post-head img').click(function(){
 		var currURL = document.URL;
 		currURL = currURL.substr(0,currURL.split("/", 3).join("/").length + 1);
 		window.location.href = currURL;
 	})
 	
+	
+	// nav bar actions
   $('nav li div.link').click(function() {
-		console.log(window.innerWidth);
-		if(window.innerWidth > 800) {
+		if(windowWidth > 800) {
 			var anchor = $(this).data("link");		
 			var aTag = $("#"+ anchor);
-			console.log(anchor);
 
 			if(inPost.get().length <= 0){ // we are on the main page
 				var location = aTag.offset().top - 50;
 				var off = $("#main").offset().top;
 				location = location - off;
-
 				if(firstClick) {
 					if(location !== 0){
-						scroller.scrollTop(location);
+						scroller.animate({scrollTop: location},'200', 'easeOutCirc', function() {});
+						$(this).addClass('active');
 					}
 					initBack.animate({
 						opacity: "0"
@@ -126,8 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					window.clearTimeout(theSlideshow);
 			} else {
 				if(location !== 0){
-					scroller.animate({scrollTop: location},'1000', 'easeOutCirc', function() {
-					});
+					scroller.animate({scrollTop: location},'1000', 'easeOutCirc', function() {});
 				}		
 			}
 			} else { // we're on a project page
@@ -178,33 +197,35 @@ document.addEventListener('DOMContentLoaded', function() {
 				// get the 3rd '/' to parse out the projection part of the URL
 				currURL = currURL.substr(0,currURL.split("/", 3).join("/").length + 1) + "#" + anchor;
 				window.location.href = currURL;
-			}
-			
+			}	
 		}
-		
 	}); 
 	
 
-	var last = -1;
-	function slideshow() {
-		console.log(imgs);
-		var rand = Math.floor(Math.random()*imgs.length);
-		if(rand === last) {
-			rand = Math.floor(Math.random()*imgs.length);
-		}
-		console.log(rand);
-		console.log(imURL + imgs[rand])
-		
-		initBack.animate({
-			opacity: "-.1"
-		},800, function(){
-			initBack.css("background-image","url("+ imURL + imgs[rand] + ")");
-			last = rand;
-			initBack.animate({
-			opacity: "1"
-		},1300, function(){});
-		} );
-	}
+//	// landing page slideshow -- unused
+//	var last = -1;
+//	function slideshow() {
+//		var rand = Math.floor(Math.random()*imgs.length);
+//		if(rand === last) {
+//			rand = Math.floor(Math.random()*imgs.length);
+//		}
+//		console.log(rand);
+//		console.log(imURL + imgs[rand])
+//		
+//		initBack.animate({
+//			opacity: "-.1"
+//		},800, function(){
+//			initBack.css("background-image","url("+ imURL + imgs[rand] + ")");
+//			last = rand;
+//			initBack.animate({
+//			opacity: "1"
+//		},1300, function(){});
+//		} );
+//	}
+//	
 	
 }, false);
+
+
+
 

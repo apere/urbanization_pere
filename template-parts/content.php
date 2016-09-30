@@ -12,7 +12,7 @@
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header <?php if(has_category( "bright-blue" )){ echo "bright-blue-background"; } if(has_category( "light-blue" )){ echo "light-blue-background"; } if(has_category( "beige" )){ echo "beige-background"; } ?>">
+	<header class="entry-header <?php if(has_category( "bright-blue" )){ echo "bright-blue-background"; } if(has_category( "light-blue" )){ echo "light-blue-background"; } if(has_category( "beige" )){ echo "beige-background"; } if(has_category( "dark-brown" )){ echo "dark-brown-background"; } ?>">
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );

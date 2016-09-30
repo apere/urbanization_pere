@@ -23,15 +23,36 @@ ol, ul {
 	&.section-list {
 		cursor: pointer;
 		li {
-			transition: font-weight 125ms ease-in-out;
+			@extend %transitions;
 			font-weight: 500;
+		//line-height:1em;
+			overflow: visible;
+			text-shadow:
+				 -1px -.25px 0 $background-color,  
+					.25px -.25px 0 $background-color,
+					-.25px .25px 0 $background-color,
+					 .25px .25px 0 $background-color;
+			
 			
 			&:hover, a:hover {
 				//font-weight: 700;				
 				color: #000;
-				&.no-content {
+				
+					//font-weight: 800;
+					text-shadow:
+				 -1px -.25px 0 $type-basic,  
+					.25px -.25px 0 $type-basic,
+					-.25px .25px 0 $type-basic,
+					 .25px .25px 0 $type-basic;
+				
+				&.no-content, &.current {
 					font-weight: 500;
 					cursor: initial ! important;
+					text-shadow:
+				 -1px -.25px 0 $background-color,  
+					.25px -.25px 0 $background-color,
+					-.25px .25px 0 $background-color,
+					 .25px .25px 0 $background-color;
 				}
 				&.current {
 					color: #000;
