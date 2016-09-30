@@ -106,6 +106,19 @@ article.post.type-post {
 	img {
 		width: 100%;
 	}
+	
+	position: relative;
+	
+	&:not(.closed) {
+		.close-me{
+			position: absolute;
+			bottom: -20px;
+			right: 0px;
+			content: "++";
+			cursor: pointer;
+		}
+	}
+	
 }
 
 #publics {

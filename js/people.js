@@ -10,21 +10,22 @@ jQuery(function($){
 	var lastClicked = "";
 	var lastClickedElement;
 	var currClickedElement;
+	var pContent = $('.person-content');
 	
+	
+	// a person's name has been clicked
 	$('#people-list li').click(function(e){
-			e.preventDefault();
-			var currentUrl = $(this).data('posturl');
-			console.log(currentUrl);
-			currentUrl = currentUrl.split(" ").join("-");
-			console.log(currentUrl);
-			var pContent = $('.person-content');
-			currClickedElement = $(this);
+		e.preventDefault();
+		var currentUrl = $(this).data('posturl');
+		currentUrl = currentUrl.split(" ").join("-");
+		currClickedElement = $(this);
 		
 		if(!currClickedElement.hasClass('no-content')) {		
 			if(lastClickedElement && !currClickedElement.hasClass('current')) {
 				lastClickedElement.removeClass('current');
 			}
 			currClickedElement.addClass('current');
+			pContent.removeClass('closed');
 		
 			$.ajax({
 					type : 'post',
@@ -39,6 +40,7 @@ jQuery(function($){
 						var outputs = String(data.substring(data.indexOf('<div class="entry-content">')));
 						var i = outputs.indexOf("<!-- .entry-content -->");
 						outputs = outputs.substring(0, i);
+						outputs = outputs + "<div class = 'close-me'>^</div>";
 						
 						if(!open) { // first click
 							pContent.html(outputs);
@@ -64,6 +66,15 @@ jQuery(function($){
 								});
 							});
 						}
+						
+						$('.person-content .close-me').click(function(e){
+							pContent.addClass('closed');
+							lastClickedElement.removeClass('current');
+							
+							pContent.slideToggle(500);
+							open = false;
+							console.log('++');
+						}); 
 						
 						lastClickedElement = currClickedElement;
 						lastClicked = currentUrl;

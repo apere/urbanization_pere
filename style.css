@@ -184,8 +184,16 @@ article.post.type-post img {
   margin-bottom: 1rem;
   display: block; }
 
-.person-content img {
-  width: 100%; }
+.person-content {
+  position: relative; }
+  .person-content img {
+    width: 100%; }
+  .person-content:not(.closed) .close-me {
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+    content: "++";
+    cursor: pointer; }
 
 #publics ul {
   margin-top: 0; }
