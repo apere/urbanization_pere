@@ -116,7 +116,12 @@ article.post.type-post {
 			right: 0px;
 			content: "++";
 			cursor: pointer;
+			display: block;
 		}
+	}
+	
+	.close-me {
+		display: none;
 	}
 	
 }

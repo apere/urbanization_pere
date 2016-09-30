@@ -32,55 +32,9 @@ ol, ul {
 					.25px -.25px 0 $background-color,
 					-.25px .25px 0 $background-color,
 					 .25px .25px 0 $background-color;
-			
-			
-			&:hover, a:hover {
-				//font-weight: 700;				
-				color: #000;
-				
-					//font-weight: 800;
-					text-shadow:
-				 -1px -.25px 0 $type-basic,  
-					.25px -.25px 0 $type-basic,
-					-.25px .25px 0 $type-basic,
-					 .25px .25px 0 $type-basic;
-				
-				&.no-content, &.current {
-					font-weight: 500;
-					cursor: initial ! important;
-					text-shadow:
-				 -1px -.25px 0 $background-color,  
-					.25px -.25px 0 $background-color,
-					-.25px .25px 0 $background-color,
-					 .25px .25px 0 $background-color;
-				}
-				&.current {
-					color: #000;
-				}
-				
-			}
 		}
 	}
 }
-
-//@keyframes slide {
-//	0% {
-//		font-weight: 500;
-//    text-shadow: 0 0 0px #000000, 0 0 0px #000000;
-//	}
-//  50% {
-//		
-//    text-shadow: 0 0 2px #000000, 0 0 2px #000000;
-//  }
-//	75%{
-//		font-weight: 500;
-//		text-shadow: 0 0 1px #000000, 0 0 1px #000000;
-//	}
-//  100% {
-//		font-weight: 800;
-//    text-shadow: 0 0 0px #000000, 0 0 0px #000000;
-//  }
-//}
 
 
 

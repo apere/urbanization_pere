@@ -193,7 +193,10 @@ article.post.type-post img {
     bottom: -20px;
     right: 0px;
     content: "++";
-    cursor: pointer; }
+    cursor: pointer;
+    display: block; }
+  .person-content .close-me {
+    display: none; }
 
 #publics ul {
   margin-top: 0; }
@@ -221,15 +224,6 @@ ol, ul {
       font-weight: 500;
       overflow: visible;
       text-shadow: -1px -0.25px 0 #d0cbc7, 0.25px -0.25px 0 #d0cbc7, -0.25px 0.25px 0 #d0cbc7, 0.25px 0.25px 0 #d0cbc7; }
-      ol.section-list li:hover, ol.section-list li a:hover, ul.section-list li:hover, ul.section-list li a:hover {
-        color: #000;
-        text-shadow: -1px -0.25px 0 #000, 0.25px -0.25px 0 #000, -0.25px 0.25px 0 #000, 0.25px 0.25px 0 #000; }
-        ol.section-list li:hover.no-content, ol.section-list li:hover.current, ol.section-list li a:hover.no-content, ol.section-list li a:hover.current, ul.section-list li:hover.no-content, ul.section-list li:hover.current, ul.section-list li a:hover.no-content, ul.section-list li a:hover.current {
-          font-weight: 500;
-          cursor: initial !important;
-          text-shadow: -1px -0.25px 0 #d0cbc7, 0.25px -0.25px 0 #d0cbc7, -0.25px 0.25px 0 #d0cbc7, 0.25px 0.25px 0 #d0cbc7; }
-        ol.section-list li:hover.current, ol.section-list li a:hover.current, ul.section-list li:hover.current, ul.section-list li a:hover.current {
-          color: #000; }
 
 #publics-nav ul {
   margin-bottom: 1em; }
@@ -263,6 +257,11 @@ nav ul {
     padding-right: 15px;
     max-width: 250px;
     width: 100%; }
+
+.nav-person-content {
+  display: none; }
+  .nav-person-content p:first-child {
+    margin-top: .75rem; }
 
 #mobile-proj-hamburger {
   width: 47px; }
@@ -324,12 +323,7 @@ nav {
         width: calc(100% - 1.3rem);
         padding: 0.65rem 0.65rem 0.65rem 0.65rem;
         font-weight: 500;
-        cursor: pointer;
-        text-shadow: -0.25px -0.25px 0 #FFF, 0.25px -0.25px 0 #FFF, -0.25px 0.25px 0 #FFF, 0.25px 0.25px 0 #FFF; }
-        nav ul li div.link:hover:not(.active) {
-          text-shadow: -0.25px -0.25px 0 #000, 0.25px -0.25px 0 #000, -0.25px 0.25px 0 #000, 0.25px 0.25px 0 #000; }
-        nav ul li div.link.active {
-          font-weight: 800; }
+        cursor: pointer; }
 
 @media only screen and (min-width: 800px) {
   html {
@@ -398,6 +392,18 @@ nav {
     line-height: 20pt;
     height: 20pt; }
 
+  ol.section-list li, ul.section-list li {
+    text-shadow: -1px -0.25px 0 #d0cbc7, 0.25px -0.25px 0 #d0cbc7, -0.25px 0.25px 0 #d0cbc7, 0.25px 0.25px 0 #d0cbc7; }
+    ol.section-list li:hover, ol.section-list li a:hover, ul.section-list li:hover, ul.section-list li a:hover {
+      color: #000;
+      text-shadow: -1px -0.25px 0 #000, 0.25px -0.25px 0 #000, -0.25px 0.25px 0 #000, 0.25px 0.25px 0 #000; }
+      ol.section-list li:hover.no-content, ol.section-list li:hover.current, ol.section-list li a:hover.no-content, ol.section-list li a:hover.current, ul.section-list li:hover.no-content, ul.section-list li:hover.current, ul.section-list li a:hover.no-content, ul.section-list li a:hover.current {
+        font-weight: 500;
+        cursor: initial !important;
+        text-shadow: -1px -0.25px 0 #d0cbc7, 0.25px -0.25px 0 #d0cbc7, -0.25px 0.25px 0 #d0cbc7, 0.25px 0.25px 0 #d0cbc7; }
+      ol.section-list li:hover.current, ol.section-list li a:hover.current, ul.section-list li:hover.current, ul.section-list li a:hover.current {
+        color: #000; }
+
   #nav-mobile-logo {
     display: none; }
 
@@ -414,7 +420,21 @@ nav {
       bottom: 0;
       width: 200px; }
 
+  /* Safari 9 */
+  .using-safari nav ul li div.link {
+    text-shadow: -1px -0.25px 0 #FFF, 0.25px -0.25px 0 #FFF, -0.25px 0.25px 0 #FFF, 0.25px 0.25px 0 #FFF; }
+    .using-safari nav ul li div.link:hover:not(.active) {
+      text-shadow: -1px -0.25px 0 #000, 0.25px -0.25px 0 #000, -0.25px 0.25px 0 #000, 0.25px 0.25px 0 #000; }
+    .using-safari nav ul li div.link.active {
+      font-weight: 800; }
+
   nav {
     opacity: 0;
     height: auto;
-    width: auto; } }
+    width: auto; }
+    nav ul li div.link {
+      text-shadow: -0.25px -0.25px 0 #FFF, 0.25px -0.25px 0 #FFF, -0.25px 0.25px 0 #FFF, 0.25px 0.25px 0 #FFF; }
+      nav ul li div.link:hover:not(.active) {
+        text-shadow: -0.25px -0.25px 0 #000, 0.25px -0.25px 0 #000, -0.25px 0.25px 0 #000, 0.25px 0.25px 0 #000; }
+      nav ul li div.link.active {
+        font-weight: 800; } }
