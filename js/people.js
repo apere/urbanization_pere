@@ -20,7 +20,7 @@ jQuery(function($){
 		var currentUrl = $(this).data('posturl');
 		currentUrl = currentUrl.split(" ").join("-");
 		currClickedElement = $(this);
-		
+
 		if(windowWidth >= 800) {
 			if(!currClickedElement.hasClass('no-content')) {		
 				if(lastClickedElement && !currClickedElement.hasClass('current')) {
@@ -72,10 +72,8 @@ jQuery(function($){
 							$('.person-content .close-me').click(function(e){
 								pContent.addClass('closed');
 								lastClickedElement.removeClass('current');
-
 								pContent.slideToggle(500);
 								open = false;
-								console.log('++');
 							}); 
 
 							lastClickedElement = currClickedElement;
