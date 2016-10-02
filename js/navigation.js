@@ -46,6 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
 		} else if(entryHeader.hasClass("dark-brown-background")) {
 			$('html').css('background','#d0cbc7' );
 		} 
+		
+		if(anchorIndex >= 0) {
+			var anchorText = url.substring(anchorIndex + 1);
+			var anchorNavTab = $('nav').find('[data-link="' + anchorText +'"]' );
+			anchorNavTab.addClass('active');
+			firstClick = false;
+		}
 	}	else { // mobile
 		if(entryHeader.hasClass("bright-blue-background")) {
 			$('#primary').css('background','#5fa7e5' );
