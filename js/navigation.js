@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	
 	
-	$( "html" ).on( "swipeleft", function() {
+	$( "html" ).on( "swiperight", function() {
 		if(inPost.get().length > 0 && windowWidth < 800) {
 			var prev = $('body').find('a[rel=prev]');
 			var url = prev.attr("href");
@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	} );
 	
-	$( "html" ).on( "swiperight", function() {
+	$( "html" ).on( "swipeleft", function() {
 		if(inPost.get().length > 0 && windowWidth < 800) {
 			var next = $('body').find('a[rel=next]');
 			var url = next.attr("href");
