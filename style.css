@@ -190,11 +190,21 @@ article.post.type-post img {
     width: 100%; }
   .person-content:not(.closed) .close-me {
     position: absolute;
-    bottom: -20px;
+    bottom: -40px;
     right: 0px;
     content: "++";
     cursor: pointer;
-    display: block; }
+    display: block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    line-height: 32px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 400ms ease-in-out; }
+    .person-content:not(.closed) .close-me:hover {
+      background: white;
+      opacity: 1; }
   .person-content .close-me {
     display: none; }
 

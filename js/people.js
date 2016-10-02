@@ -72,8 +72,13 @@ jQuery(function($){
 							$('.person-content .close-me').click(function(e){
 								pContent.addClass('closed');
 								lastClickedElement.removeClass('current');
+								
+								
 								pContent.slideToggle(500);
 								open = false;
+								
+							
+								
 							}); 
 
 							lastClickedElement = currClickedElement;
