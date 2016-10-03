@@ -35,7 +35,7 @@ html {
 			
 		}
 		
-		@media only screen and (max-width: 1150px) and (min-width: 1020px) {
+		@media only screen and (max-width: 1200px) and (min-width: 1020px) {
 			//padding: $nav-margin-m #{2*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};
 			width: 600px;
 		}
@@ -71,6 +71,32 @@ html {
 	#main {
 		display: inline-block;
 		padding-bottom: 30vh !important;
+		
+		@media only screen and (min-width: 1275px) {
+			padding: 0 #{3*$nav-margin + 15px} 0 #{2*$nav-margin};	
+			
+		}
+		
+		@media only screen and (max-width: 1275px) and (min-width: 1020px) {
+			//padding: $nav-margin-m #{2*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};
+			
+			width: 600px;
+		}
+		
+		@media only screen and (max-width: 1020px) and (min-width: 450px)  {
+			//padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+			width: 500px;
+		}
+		
+		@media only screen and (max-width: 945px) and (min-width: 860px)  {
+			//padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+			width: 450px;
+		}
+		
+		@media only screen and (max-width: 870px)  {
+			//padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+			width: 400px;
+		}
 		}
 }
 
@@ -105,7 +131,7 @@ main {
 	text-align: center;
 	background: rgba(255,255,255, .2);
 	transition:all 400ms ease-in-out;
-	margin-top: calc(60vh - 60px);
+	margin-top: calc(65vh - 60px);
 	height: 60px;
 	opacity:.7;
 	
@@ -117,37 +143,37 @@ main {
 
 .next-post {
 	
-	@media only screen and (min-width: 1550px) {
-		right: 180px;
-	}
-	
-	@media only screen and (min-width: 1160px) and (max-width: 1550px) {
-		right: 120px;
+	@media only screen and (min-width: 1275px) {
+		left: $nav-margin + $nav-width + 3*$nav-margin + 45px + 700px;
 	}
 
-	@media only screen and (max-width: 1160px) and (min-width: 975px) {
-		right: 90px;
+	@media only screen and (max-width: 1275px) and (min-width: 1020px) {
+		left: $nav-margin + $nav-width +  45px + 600px;
 	}
 
-	@media only screen and (max-width: 975px)  {
-		right: 50px;
+	@media only screen and (max-width: 1020px) and (min-width: 945px)  {
+		left: $nav-margin + $nav-width +  45px + 515px;
+	}
+
+	@media only screen and (max-width: 945px) and (min-width: 860px)  {
+		left: $nav-margin + $nav-width +  45px + 450px;
+	}
+
+	@media only screen and (max-width: 870px)  {
+		left: $nav-margin + $nav-width +  45px + 400px;
 	}
 	
 }
 
 .prev-post {
 	
-		@media only screen and (min-width: 1160px) {
-			left: $nav-margin + $nav-width + 35px;
-		}
-		
-		@media only screen and (max-width: 1160px) and (min-width: 975px) {
-			left: $nav-margin + $nav-width + 25px;	
-		}
-		
-		@media only screen and (max-width: 975px)  {
-			left: $nav-margin + $nav-width + 10px;
-		}
-	
+	@media only screen and (min-width: 1200px) {
+		left: $nav-margin + $nav-width + 55px;
+	}
+
+	@media only screen and (max-width: 1200px)  {
+		left: $nav-margin + $nav-width + 10px;
+	}
+
 
 }

@@ -11,8 +11,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<?php previous_post_link( '%link', '<div class="prev-post">&lt;</div>', TRUE ); ?>
-			<?php next_post_link( '%link', '<div class="next-post">&gt;</div>', TRUE ); ?>
+			<?php previous_post_link( '%link', '<div class="prev-post">&lt;</div>', TRUE, 'people' ); ?>
+			<?php next_post_link( '%link', '<div class="next-post">&gt;</div>', TRUE, 'people' ); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 

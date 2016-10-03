@@ -376,7 +376,7 @@ nav {
     @media only screen and (min-width: 800px) and (min-width: 1200px) {
       #primary #main {
         padding: 0 165px 0 100px; } }
-    @media only screen and (min-width: 800px) and (max-width: 1150px) and (min-width: 1020px) {
+    @media only screen and (min-width: 800px) and (max-width: 1200px) and (min-width: 1020px) {
       #primary #main {
         width: 600px; } }
     @media only screen and (min-width: 800px) and (max-width: 1020px) and (min-width: 900px) {
@@ -397,8 +397,24 @@ nav {
     padding-bottom: 0; }
     .single-post #primary #main {
       display: inline-block;
-      padding-bottom: 30vh !important; }
+      padding-bottom: 30vh !important; } }
+    @media only screen and (min-width: 800px) and (min-width: 1275px) {
+      .single-post #primary #main {
+        padding: 0 165px 0 100px; } }
+    @media only screen and (min-width: 800px) and (max-width: 1275px) and (min-width: 1020px) {
+      .single-post #primary #main {
+        width: 600px; } }
+    @media only screen and (min-width: 800px) and (max-width: 1020px) and (min-width: 450px) {
+      .single-post #primary #main {
+        width: 500px; } }
+    @media only screen and (min-width: 800px) and (max-width: 945px) and (min-width: 860px) {
+      .single-post #primary #main {
+        width: 450px; } }
+    @media only screen and (min-width: 800px) and (max-width: 870px) {
+      .single-post #primary #main {
+        width: 400px; } }
 
+@media only screen and (min-width: 800px) {
   .person-content img {
     width: 300px; }
 
@@ -418,32 +434,32 @@ nav {
     text-align: center;
     background: rgba(255, 255, 255, 0.2);
     transition: all 400ms ease-in-out;
-    margin-top: calc(60vh - 60px);
+    margin-top: calc(65vh - 60px);
     height: 60px;
     opacity: .7; }
     .next-post:hover, .prev-post:hover {
       opacity: 1;
       background: white; } }
-@media only screen and (min-width: 800px) and (min-width: 1550px) {
+@media only screen and (min-width: 800px) and (min-width: 1275px) {
   .next-post {
-    right: 180px; } }
-@media only screen and (min-width: 800px) and (min-width: 1160px) and (max-width: 1550px) {
+    left: 1220px; } }
+@media only screen and (min-width: 800px) and (max-width: 1275px) and (min-width: 1020px) {
   .next-post {
-    right: 120px; } }
-@media only screen and (min-width: 800px) and (max-width: 1160px) and (min-width: 975px) {
+    left: 970px; } }
+@media only screen and (min-width: 800px) and (max-width: 1020px) and (min-width: 945px) {
   .next-post {
-    right: 90px; } }
-@media only screen and (min-width: 800px) and (max-width: 975px) {
+    left: 885px; } }
+@media only screen and (min-width: 800px) and (max-width: 945px) and (min-width: 860px) {
   .next-post {
-    right: 50px; } }
+    left: 820px; } }
+@media only screen and (min-width: 800px) and (max-width: 870px) {
+  .next-post {
+    left: 770px; } }
 
-@media only screen and (min-width: 800px) and (min-width: 1160px) {
+@media only screen and (min-width: 800px) and (min-width: 1200px) {
   .prev-post {
-    left: 360px; } }
-@media only screen and (min-width: 800px) and (max-width: 1160px) and (min-width: 975px) {
-  .prev-post {
-    left: 350px; } }
-@media only screen and (min-width: 800px) and (max-width: 975px) {
+    left: 380px; } }
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
   .prev-post {
     left: 335px; } }
 
