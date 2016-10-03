@@ -16,15 +16,15 @@ html {
 #primary {
 	position:absolute;
 	display:block;
-	height: 100vh;
+	min-height: calc(100vh  - 5px);
 	top: 0;
 	left: $nav-width + $nav-margin + $nav-margin;
 	width: calc(100vw - #{$nav-width + $nav-margin});
-	overflow-x: hidden;
 	overflow-y: scroll;
 	z-index: -200;
 	opacity: 0;
 	margin: 0;
+	overflow: visible !important;
 	
 	#main {
 		display: inline-block;
@@ -147,20 +147,24 @@ main {
 		left: $nav-margin + $nav-width + 3*$nav-margin + 45px + 700px;
 	}
 
-	@media only screen and (max-width: 1275px) and (min-width: 1020px) {
-		left: $nav-margin + $nav-width +  45px + 600px;
+	@media only screen and (max-width: 1275px) and (min-width: 1200px) {
+		left: $nav-margin + $nav-width +  135px + 650px;
 	}
 
-	@media only screen and (max-width: 1020px) and (min-width: 945px)  {
-		left: $nav-margin + $nav-width +  45px + 515px;
+	@media only screen and (max-width: 1200px) and (min-width: 1020px)  {
+		left: $nav-margin + $nav-width +  65px + 600px;
 	}
 
-	@media only screen and (max-width: 945px) and (min-width: 860px)  {
-		left: $nav-margin + $nav-width +  45px + 450px;
+	@media only screen and (max-width: 1020px) and (min-width: 950px)  {
+		left: $nav-margin + $nav-width +  5px + 570px;
 	}
 
+	@media only screen and (max-width: 950px)  {
+		left: $nav-margin + $nav-width + 10px + 500px;
+	}
+	
 	@media only screen and (max-width: 870px)  {
-		left: $nav-margin + $nav-width +  45px + 400px;
+		left: $nav-margin + $nav-width + 10px + 450px;
 	}
 	
 }

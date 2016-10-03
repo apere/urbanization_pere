@@ -91,10 +91,10 @@ h3 {
 a {
   transition: all 100ms ease-in-out; }
 
-.page a {
+.page a, .type-post a {
   font-weight: 800;
   transition: all 250ms ease-in-out; }
-  .page a:hover {
+  .page a:hover, .type-post a:hover {
     color: #959595; }
 
 article.post.type-post h1 {
@@ -146,8 +146,7 @@ body {
       body.single.single-post #primary {
         margin-top: calc(1rem + 0.375em);
         display: block;
-        padding: 0.75em;
-        height: 100vh; }
+        padding: 0.75em; }
         body.single.single-post #primary h1 {
           margin-bottom: 0em;
           font-size: 11pt; }
@@ -357,15 +356,15 @@ nav {
   #primary {
     position: absolute;
     display: block;
-    height: 100vh;
+    min-height: calc(100vh  - 5px);
     top: 0;
     left: 375px;
     width: calc(100vw - 325px);
-    overflow-x: hidden;
     overflow-y: scroll;
     z-index: -200;
     opacity: 0;
     margin: 0;
+    overflow: visible !important;
     padding-top: 50px;
     padding-bottom: 75vh;
     overflow-x: hidden; }
@@ -443,18 +442,21 @@ nav {
 @media only screen and (min-width: 800px) and (min-width: 1275px) {
   .next-post {
     left: 1220px; } }
-@media only screen and (min-width: 800px) and (max-width: 1275px) and (min-width: 1020px) {
+@media only screen and (min-width: 800px) and (max-width: 1275px) and (min-width: 1200px) {
   .next-post {
-    left: 970px; } }
-@media only screen and (min-width: 800px) and (max-width: 1020px) and (min-width: 945px) {
+    left: 1110px; } }
+@media only screen and (min-width: 800px) and (max-width: 1200px) and (min-width: 1020px) {
   .next-post {
-    left: 885px; } }
-@media only screen and (min-width: 800px) and (max-width: 945px) and (min-width: 860px) {
+    left: 990px; } }
+@media only screen and (min-width: 800px) and (max-width: 1020px) and (min-width: 950px) {
   .next-post {
-    left: 820px; } }
+    left: 900px; } }
+@media only screen and (min-width: 800px) and (max-width: 950px) {
+  .next-post {
+    left: 835px; } }
 @media only screen and (min-width: 800px) and (max-width: 870px) {
   .next-post {
-    left: 770px; } }
+    left: 785px; } }
 
 @media only screen and (min-width: 800px) and (min-width: 1200px) {
   .prev-post {
