@@ -356,7 +356,7 @@ nav {
   #primary {
     position: absolute;
     display: block;
-    min-height: calc(100vh  - 5px);
+    min-height: calc(100vh  - 50px);
     top: 0;
     left: 375px;
     width: calc(100vw - 325px);

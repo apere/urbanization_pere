@@ -16,7 +16,7 @@ html {
 #primary {
 	position:absolute;
 	display:block;
-	min-height: calc(100vh  - 5px);
+	min-height: calc(100vh  - 50px);
 	top: 0;
 	left: $nav-width + $nav-margin + $nav-margin;
 	width: calc(100vw - #{$nav-width + $nav-margin});
