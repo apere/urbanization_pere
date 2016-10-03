@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			var aTag = $("#"+ anchor);
 
 			if(inPost.get().length <= 0){ // we are on the main page
-				var location = aTag.offset().top - 50;
+				var location = aTag.offset().top ;
 				var off = $("#main").offset().top;
 				location = location - off;
 				if(firstClick) {
