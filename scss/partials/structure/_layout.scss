@@ -1,6 +1,5 @@
 html {
 	background: $nav-background-color;
-	min-width: 100vw;
 }
 
 #mobile-post-head {
@@ -44,9 +43,14 @@ body {
 				margin-top: calc(1rem + #{$nav-padding/2});
 				display: block;
 				padding: $nav-padding;
+				height: 100vh;
 				
 				h1 {
-					margin-bottom: 1em;
+					margin-bottom: 0em;
+					font-size: $font-mobile-body-size;
+				}
+				
+				h2 {
 					font-size: $font-mobile-body-size;
 				}
 				
