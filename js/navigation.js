@@ -20,12 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
 	var imgs = ["test.png", "test2.png" ];
 	
 	var ua = navigator.userAgent.toLowerCase(); 
+	var msie = ua.indexOf("MSIE ");
+	
 	if (ua.indexOf('safari') != -1) { 
 		if (ua.indexOf('chrome') > -1) {
 			
 		} else {
 			$('html').addClass('using-safari');
 		}
+	}
+	
+	if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+	{
+			alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+			$('html').addClass('using-ie');
 	}
 	
 	navBar.animate({

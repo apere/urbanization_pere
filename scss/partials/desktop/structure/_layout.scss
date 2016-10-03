@@ -14,43 +14,56 @@ html {
 }
 
 #primary {
+	position:absolute;
 	display:block;
 	height: 100vh;
-	width: calc(100vw - #{$nav-width + $nav-margin});
-	position:absolute;
 	top: 0;
-	right:0;
-	overflow: auto;
+	left: $nav-width + $nav-margin + $nav-margin;
+	width: calc(100vw - #{$nav-width + $nav-margin});
+	overflow-x: hidden;
+	overflow-y: scroll;
 	z-index: -200;
 	opacity: 0;
+	margin: 0;
 	
 	#main {
+		display: inline-block;
+		width: 700px;
 		@media only screen and (min-width: 1160px) {
-			padding: $nav-margin #{3*$nav-margin + 15px} $nav-margin #{2*$nav-margin};	
+		//	padding: $nav-margin #{3*$nav-margin + 15px} $nav-margin #{2*$nav-margin};	
 		}
 		
 		@media only screen and (max-width: 1160px) and (min-width: 975px) {
-			padding: $nav-margin-m #{2*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};	
+			//padding: $nav-margin-m #{2*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};	
 		}
 		
 		@media only screen and (max-width: 975px)  {
-			padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+			//padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
 		}
-		padding-bottom: 75vh !important;
+		//padding-bottom: 75vh !important;
 	}
+	padding-top: 50px;
+	padding-bottom: 75vh;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+html {
+	overflow-x: hidden;
 }
 
 .single-post #primary #main {
+	display: inline-block;
 	@media only screen and (min-width: 1160px) {
-			padding: $nav-margin #{4*$nav-margin} $nav-margin #{2*$nav-margin};	
+			//padding: $nav-margin #{4*$nav-margin} $nav-margin #{2*$nav-margin};	
 		}
 		
 		@media only screen and (max-width: 1160px) and (min-width: 975px) {
-			padding: $nav-margin-m #{4*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};	
+		// padding: $nav-margin-m #{4*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};	
 		}
 		
 		@media only screen and (max-width: 975px)  {
-			padding: $nav-margin-m2 #{4*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+			//padding: $nav-margin-m2 #{4*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
 		}
 }
 
@@ -80,13 +93,18 @@ main {
 	position: fixed;
 	top: 0vh;
 	height: 100vh;
-	line-height: 80vh;
+	line-height: 60px;
 	width: 30px;
 	text-align: center;
-	opacity: .05;
+	background: rgba(255,255,255, .2);
+	transition:all 400ms ease-in-out;
+	margin-top: calc(60vh - 60px);
+	height: 60px;
+	opacity:.7;
 	
 	&:hover {
 		opacity: 1;
+		background: rgba(255,255,255, 1);
 	}
 }
 
@@ -117,7 +135,7 @@ main {
 		}
 		
 		@media only screen and (max-width: 1160px) and (min-width: 975px) {
-			left: $nav-margin + $nav-width + 20px;	
+			left: $nav-margin + $nav-width + 25px;	
 		}
 		
 		@media only screen and (max-width: 975px)  {

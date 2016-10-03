@@ -353,38 +353,29 @@ nav {
     opacity: 0; }
 
   #primary {
+    position: absolute;
     display: block;
     height: 100vh;
-    width: calc(100vw - 325px);
-    position: absolute;
     top: 0;
-    right: 0;
-    overflow: auto;
+    left: 375px;
+    width: calc(100vw - 325px);
+    overflow-x: hidden;
+    overflow-y: scroll;
     z-index: -200;
-    opacity: 0; }
+    opacity: 0;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 75vh;
+    width: 100%;
+    overflow-x: hidden; }
     #primary #main {
-      padding-bottom: 75vh !important; } }
-    @media only screen and (min-width: 800px) and (min-width: 1160px) {
-      #primary #main {
-        padding: 50px 165px 50px 100px; } }
-    @media only screen and (min-width: 800px) and (max-width: 1160px) and (min-width: 975px) {
-      #primary #main {
-        padding: 40px 80px 40px 80px; } }
-    @media only screen and (min-width: 800px) and (max-width: 975px) {
-      #primary #main {
-        padding: 25px 50px 25px 50px; } }
+      display: inline-block;
+      width: 700px; }
+  html {
+    overflow-x: hidden; }
 
-@media only screen and (min-width: 800px) and (min-width: 1160px) {
   .single-post #primary #main {
-    padding: 50px 200px 50px 100px; } }
-@media only screen and (min-width: 800px) and (max-width: 1160px) and (min-width: 975px) {
-  .single-post #primary #main {
-    padding: 40px 160px 40px 80px; } }
-@media only screen and (min-width: 800px) and (max-width: 975px) {
-  .single-post #primary #main {
-    padding: 25px 100px 25px 50px; } }
-
-@media only screen and (min-width: 800px) {
+    display: inline-block; }
   .person-content img {
     width: 300px; }
 
@@ -399,12 +390,17 @@ nav {
     position: fixed;
     top: 0vh;
     height: 100vh;
-    line-height: 80vh;
+    line-height: 60px;
     width: 30px;
     text-align: center;
-    opacity: .05; }
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 400ms ease-in-out;
+    margin-top: calc(60vh - 60px);
+    height: 60px;
+    opacity: .7; }
     .next-post:hover, .prev-post:hover {
-      opacity: 1; } }
+      opacity: 1;
+      background: white; } }
 @media only screen and (min-width: 800px) and (min-width: 1550px) {
   .next-post {
     right: 180px; } }
@@ -423,7 +419,7 @@ nav {
     left: 360px; } }
 @media only screen and (min-width: 800px) and (max-width: 1160px) and (min-width: 975px) {
   .prev-post {
-    left: 345px; } }
+    left: 350px; } }
 @media only screen and (min-width: 800px) and (max-width: 975px) {
   .prev-post {
     left: 335px; } }
