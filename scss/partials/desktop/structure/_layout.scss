@@ -29,22 +29,36 @@ html {
 	#main {
 		display: inline-block;
 		width: 700px;
-		@media only screen and (min-width: 1160px) {
-		//	padding: $nav-margin #{3*$nav-margin + 15px} $nav-margin #{2*$nav-margin};	
+		
+		@media only screen and (min-width: 1200px) {
+			padding: 0 #{3*$nav-margin + 15px} 0 #{2*$nav-margin};	
+			
 		}
 		
-		@media only screen and (max-width: 1160px) and (min-width: 975px) {
-			//padding: $nav-margin-m #{2*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};	
+		@media only screen and (max-width: 1150px) and (min-width: 1020px) {
+			//padding: $nav-margin-m #{2*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};
+			width: 600px;
 		}
 		
-		@media only screen and (max-width: 975px)  {
+		@media only screen and (max-width: 1020px) and (min-width: 900px)  {
 			//padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+			width: 500px;
 		}
-		//padding-bottom: 75vh !important;
+		
+		@media only screen and (max-width: 900px) and (min-width: 860px)  {
+			//padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+			width: 450px;
+		}
+		
+		@media only screen and (max-width: 860px)  {
+			//padding: $nav-margin-m2 #{2*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+			width: 400px;
+		}
+		
+		padding-bottom: 75vh !important;
 	}
 	padding-top: 50px;
 	padding-bottom: 75vh;
-	width: 100%;
 	overflow-x: hidden;
 }
 
@@ -52,18 +66,11 @@ html {
 	overflow-x: hidden;
 }
 
-.single-post #primary #main {
-	display: inline-block;
-	@media only screen and (min-width: 1160px) {
-			//padding: $nav-margin #{4*$nav-margin} $nav-margin #{2*$nav-margin};	
-		}
-		
-		@media only screen and (max-width: 1160px) and (min-width: 975px) {
-		// padding: $nav-margin-m #{4*$nav-margin-m} $nav-margin-m #{2*$nav-margin-m};	
-		}
-		
-		@media only screen and (max-width: 975px)  {
-			//padding: $nav-margin-m2 #{4*$nav-margin-m2} $nav-margin-m2 #{2*$nav-margin-m2};	
+.single-post #primary {
+	padding-bottom: 0;
+	#main {
+		display: inline-block;
+		padding-bottom: 30vh !important;
 		}
 }
 

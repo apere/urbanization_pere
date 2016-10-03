@@ -366,16 +366,37 @@ nav {
     margin: 0;
     padding-top: 50px;
     padding-bottom: 75vh;
-    width: 100%;
     overflow-x: hidden; }
     #primary #main {
       display: inline-block;
-      width: 700px; }
+      width: 700px;
+      padding-bottom: 75vh !important; } }
+    @media only screen and (min-width: 800px) and (min-width: 1200px) {
+      #primary #main {
+        padding: 0 165px 0 100px; } }
+    @media only screen and (min-width: 800px) and (max-width: 1150px) and (min-width: 1020px) {
+      #primary #main {
+        width: 600px; } }
+    @media only screen and (min-width: 800px) and (max-width: 1020px) and (min-width: 900px) {
+      #primary #main {
+        width: 500px; } }
+    @media only screen and (min-width: 800px) and (max-width: 900px) and (min-width: 860px) {
+      #primary #main {
+        width: 450px; } }
+    @media only screen and (min-width: 800px) and (max-width: 860px) {
+      #primary #main {
+        width: 400px; } }
+
+@media only screen and (min-width: 800px) {
   html {
     overflow-x: hidden; }
 
-  .single-post #primary #main {
-    display: inline-block; }
+  .single-post #primary {
+    padding-bottom: 0; }
+    .single-post #primary #main {
+      display: inline-block;
+      padding-bottom: 30vh !important; }
+
   .person-content img {
     width: 300px; }
 
