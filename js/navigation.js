@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
 	{
-			alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
 			$('html').addClass('using-ie');
 	}
 	
