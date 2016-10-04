@@ -43,6 +43,7 @@ body {
 				margin-top: calc(1rem + #{$nav-padding/2});
 				display: block;
 				padding: $nav-padding;
+				min-height: 100vh;
 				
 				h1 {
 					margin-bottom: 0em;

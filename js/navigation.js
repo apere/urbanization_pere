@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	var theSlideshow;
 	var imURL = templateUrl + "/assets/imgs/";
-	var imgs = ["test.png", "test2.png" ];
+	var imgs = ["OfU1.png", "OfU2.png", "OfU3.png", "OfU4.png", "OfU5.png", "OfU6.png", "OfU7.png", "OfU8.png", "OfU9.png", "OfU10.png", "OfU11.png", "OfU12.png", "OfU13.png", "OfU14.png" ];
 	
 	var ua = navigator.userAgent.toLowerCase(); 
 	var msie = ua.indexOf("MSIE ");
@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	var numSections = sections.length;
 	
 	scroller.scroll(function() {
+		console.log("*****");
 		if(windowWidth > 800 && !firstClick) {
 			var current = $(sections[0]);
 			for(var i = 0; i <numSections; i++){
@@ -121,6 +122,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		}		
 	});
+	
+	
+		$('body').scroll(function() {
+			console.log("*");
+		});
 	
 	
 	

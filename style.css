@@ -146,7 +146,8 @@ body {
       body.single.single-post #primary {
         margin-top: calc(1rem + 0.375em);
         display: block;
-        padding: 0.75em; }
+        padding: 0.75em;
+        min-height: 100vh; }
         body.single.single-post #primary h1 {
           margin-bottom: 0em;
           font-size: 11pt; }
@@ -345,7 +346,7 @@ nav {
 
   #initial-background {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -357,16 +358,17 @@ nav {
     position: absolute;
     display: block;
     min-height: calc(100vh  - 50px);
+    height: calc(100vh - 50px);
     top: 0;
     left: 375px;
     width: calc(100vw - 325px);
-    overflow-y: scroll;
     z-index: -200;
     opacity: 0;
     margin: 0;
-    overflow: visible !important;
+    overflow: auto;
+    overflow-x: hidden;
     padding-top: 50px;
-    padding-bottom: 75vh;
+    padding-bottom: 0;
     overflow-x: hidden; }
     #primary #main {
       display: inline-block;
