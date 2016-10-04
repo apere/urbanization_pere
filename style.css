@@ -181,7 +181,7 @@ body {
   max-width: 900px; }
 
 article.post.type-post img {
-  width: 90% !important;
+  width: 100%;
   height: auto;
   margin-bottom: 1rem;
   display: block; }
@@ -416,6 +416,9 @@ nav {
         width: 400px; } }
 
 @media only screen and (min-width: 800px) {
+  article.post.type-post img {
+    width: 100%; }
+
   .person-content img {
     width: 300px; }
 
