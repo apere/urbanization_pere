@@ -361,7 +361,7 @@ nav {
     height: calc(100vh - 50px);
     top: 0;
     left: 375px;
-    width: calc(100vw - 325px);
+    width: calc(100vw - 375px);
     z-index: -200;
     opacity: 0;
     margin: 0;
@@ -471,7 +471,7 @@ nav {
     left: 335px; } }
 
 @media only screen and (min-width: 800px) {
-  #people-list, #project-list {
+  #people-list {
     -moz-column-count: 2;
     -moz-column-gap: 10px;
     -moz-column-rule: none;
@@ -514,7 +514,8 @@ nav {
       position: absolute;
       left: 0.65rem;
       bottom: 0;
-      width: 200px; }
+      width: 200px;
+      cursor: pointer; }
 
   /* Safari 9 */
   .using-safari nav ul li div.link {

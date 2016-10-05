@@ -29,17 +29,18 @@
 					?>
 				</li>
 				<li>
-					<div data-link="people" class="link">People</div>
-					<?php 
-						get_template_part('sections-people-nav');
-					?>
-				</li>
-				<li>
 					<div data-link="publics" class="link">Publics</div>
 					<?php 
 						get_template_part('sections-publics-nav');
 					?>
 				</li>
+				<li>
+					<div data-link="people" class="link">People</div>
+					<?php 
+						get_template_part('sections-people-nav');
+					?>
+				</li>
+				
 				
 			</ul>
 		</nav>

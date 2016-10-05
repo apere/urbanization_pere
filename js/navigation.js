@@ -269,6 +269,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	} );
 	
+	$('#gsd-logo').on("click", function() {
+		window.location.href = "http://www.gsd.harvard.edu";
+	});
+	
 }, false);
 
 
