@@ -17,7 +17,7 @@
 					?>
 				</li>
 				<li >
-					<div data-link="positions" class="link">Positions</div>
+					<div data-link="positions" class="link">Propositions</div>
 					<?php 
 						get_template_part('sections-positions-nav');
 					?>

@@ -1,6 +1,6 @@
 <section id="positions-nav" class = "nav-section-content">
 	<article class="nav-section-content">
-		<h1>Positions</h1>
+		<h1>Propositions</h1>
 		<main>
 			<p>
 				The work of the office can be described under the general rubric of design research. Design research is synthetic, incorporating information relative to a particular project from a diverse array of sources. Often characterized by its capacity to organize and visually represent complex arrays of information, design research deploys simulations and scenario-based projections to reveal latent potentials for future conditions. Design research is most often propositional, rather than simply empirical or descriptive. Design research projects stand simultaneously as propositions for intervention in the world, and as a form of knowledge about the world.

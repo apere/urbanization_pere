@@ -291,7 +291,8 @@ nav ul {
   left: 0;
   width: 100%; }
   .nav-wrapper #gsd-logo {
-    display: none; }
+    width: 200px;
+    margin: 2em 0.75em; }
   .nav-wrapper #office-logo {
     cursor: pointer; }
 
@@ -514,8 +515,8 @@ nav {
       position: absolute;
       left: 0.65rem;
       bottom: 0;
-      width: 200px;
-      cursor: pointer; }
+      cursor: pointer;
+      margin: 0 !important; }
 
   /* Safari 9 */
   .using-safari nav ul li div.link {
