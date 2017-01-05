@@ -41,7 +41,7 @@ ol, ul {
 					-.25px .25px 0 $type-basic,
 					 .25px .25px 0 $type-basic;
 				
-				&.no-content, &.current {
+				&.no-content, &.current , &.current-clicked{
 					font-weight: 500;
 					cursor: initial ! important;
 					text-shadow:
@@ -50,7 +50,7 @@ ol, ul {
 					-.25px .25px 0 $background-color,
 					 .25px .25px 0 $background-color;
 				}
-				&.current {
+				&.current, &.current-clicked {
 					color: #000;
 				}
 				

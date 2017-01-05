@@ -11,8 +11,15 @@
 		endif; ?>
 			</ul>
 			
-			<div id="people-person" class="person-content closed">
-			</div>
+			<ul id="people-person-content-list" class="person-content closed">
+				<?php if ( have_posts() ) : ?>
+						<?php
+							while ( have_posts() ) : the_post();
+								get_template_part( 'template-parts/content', 'person' );
+							endwhile;
+					endif; ?>
+				<div class="close-me">^</div>				
+			</ul>
 		</main>
 	</article>
 </section>

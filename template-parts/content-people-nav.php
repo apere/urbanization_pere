@@ -11,7 +11,7 @@
 
 	<?php if(has_category('People')): ?>
 		<li data-posturl="<?php echo(get_permalink()) ?>" class="<?php if( $post->post_content == "" ) {
-    echo "no-content"; }?>">
+    echo "person-link-object no-content"; } else {echo "person-link-object";}?>">
 				<span><?php the_title() ?></span>
 			<div class = "person-content nav-person-content closed">
 				<?php 

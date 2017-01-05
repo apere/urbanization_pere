@@ -11,8 +11,10 @@
 
 	<?php if(has_category('People')): ?>
 		<li data-posturl="<?php echo(get_permalink()) ?>" class="<?php if( $post->post_content == "" ) {
-    echo "no-content"; }?> ">
-				<span><?php the_title() ?></span>
+    echo "no-content"; } else {echo "person-list-object";}?>">
+			<div class = "individual-person-content">
+				<?php the_content() ?>
+			</div>
 		</li>
 	<?php endif; ?>
 	

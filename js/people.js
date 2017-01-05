@@ -12,86 +12,55 @@ jQuery(function($){
 	var currClickedElement;
 	var pContent = $('.person-content');
 	var windowWidth = window.innerWidth;
+	var lastClickedObject = null;
+	var content = "";
 	
+	var lastURL = "";
+	var currentUrl = "  ";
+
 	
 	// a person's name has been clicked
 	$('#people-list li').click(function(e){
 		e.preventDefault();
-		var currentUrl = $(this).data('posturl');
+		currentUrl = $(this).data('posturl');
 		currentUrl = currentUrl.split(" ").join("-");
 		currClickedElement = $(this);
+		
+		console.log('^^^^');
+		console.log("clicked url: " + currentUrl.toString());
+		
+		if(pContent.hasClass('closed')) {
+			pContent.slideToggle(500);
+			pContent.removeClass('closed');
+		}		
+		
+		if(currentUrl !== lastURL) {
+			if(windowWidth >= 800) { // Desktop
+				if(!currClickedElement.hasClass('no-content')) {		// have content
 
-		if(windowWidth >= 800) {
-			if(!currClickedElement.hasClass('no-content')) {		
-				if(lastClickedElement && !currClickedElement.hasClass('current')) {
-					lastClickedElement.removeClass('current');
+					$('.current-clicked').removeClass('current-clicked'); // remove any old clicked elements
+					$('.current-person').slideUp(500).removeClass('current-person'); // removed any old displayed people objects
+
+
+					currClickedElement.addClass('current-clicked');
+					pContent.removeClass('closed');
+
+					content = $(".person-list-object[data-posturl='" + currentUrl.toString() + "']");
+					console.log("content");
+					console.log(content);
+					content.addClass('current-person');
+					content.slideDown(500);
 				}
-				currClickedElement.addClass('current');
-				pContent.removeClass('closed');
-
-				$.ajax({
-						type : 'post',
-						url : currentUrl,  
-						data: {
-								action: 'peopleAjaxHandler',  
-								post_url: currentUrl  
-						},
-						success: function(data){
-
-							// trim out the content
-							var outputs = String(data.substring(data.indexOf('<div class="entry-content">')));
-							var i = outputs.indexOf("<!-- .entry-content -->");
-							outputs = outputs.substring(0, i);
-							outputs = outputs + "<div class = 'close-me'>^</div>";
-
-							if(!open) { // first click
-								pContent.html(outputs);
-								pContent.css("opacity", "1");
-								pContent.css("display", "none");
-								$('#people-list').animate({"margin-bottom": "4em"}, 100, function() {
-									pContent.slideToggle(500);
-									open = true;
-								});
-
-							}
-							else if(lastClicked !== currentUrl) { // did we click the same one twice?
-								pContent.animate({
-										opacity: "0"
-								}, 500, function() {
-
-
-									pContent.html(outputs);
-									pContent.animate({
-										opacity: "1"
-									}, 600, function() {
-
-									});
-								});
-							}
-
-							$('.person-content .close-me').click(function(e){
-								pContent.addClass('closed');
-								lastClickedElement.removeClass('current');
-								
-								
-								pContent.slideToggle(500);
-								open = false;
-								
-							
-								
-							}); 
-
-							lastClickedElement = currClickedElement;
-							lastClicked = currentUrl;
-							open = true;
-						}
-				});
+			} else { // mobile
+				content = $(this).find('.nav-person-content');
+				content.slideToggle(500);
 			}
-		} else {
-			var content = $(this).find('.nav-person-content');
-			console.log(content);
-			content.slideToggle(500);
-		}
+			
+			}
+		
+		lastClickedElement = currClickedElement;
+		lastClickedObject = content;
+		lastURL = currentUrl;
 	});
 	
 	

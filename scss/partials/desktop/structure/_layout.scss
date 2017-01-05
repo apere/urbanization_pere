@@ -110,9 +110,15 @@ article.post.type-post {
 
 .person-content {
 	// do not put transition timing here (handled in JS)
+	display:none;
+	min-height: 100px;
 	img {
 		width: 300px;
 	}
+}
+
+.person-list-object {
+	display: none;
 }
 
 main {
