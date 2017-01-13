@@ -105,6 +105,12 @@ article.post.type-post {
 	}
 }
 
+
+.no-content{
+	.close-me {
+		display: none !important;
+	}
+}
 .person-content {
 	// do not put transition timing here (handled in JS)
 	img {
@@ -126,12 +132,10 @@ article.post.type-post {
 			height: 20px;
 			line-height:32px;
 			//border: 1px solid rgba(0,0,0,1);
-			opacity: 1;
 			background: rgba(255,255,255, .2);
 			transition:all 400ms ease-in-out;
 			&:hover {
 				background: rgba(255,255,255, 1);
-				opacity: 1;
 			
 			}
 			
@@ -139,7 +143,7 @@ article.post.type-post {
 	}
 	
 	.close-me {
-		display: none;
+		//display: none;
 	}
 	
 }

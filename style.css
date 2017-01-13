@@ -64,7 +64,7 @@ article main, p {
   font-size: 16pt;
   line-height: 20pt; }
 
-.current, .current-clicked {
+.current {
   font-family: "Fakt-SemiBold" !important; }
 
 h1 {
@@ -191,6 +191,9 @@ article.post.type-post img {
   margin-bottom: 1rem;
   display: block; }
 
+.no-content .close-me {
+  display: none !important; }
+
 .person-content {
   position: relative; }
   .person-content img {
@@ -206,14 +209,10 @@ article.post.type-post img {
     width: 20px;
     height: 20px;
     line-height: 32px;
-    opacity: 1;
     background: rgba(255, 255, 255, 0.2);
     transition: all 400ms ease-in-out; }
     .person-content:not(.closed) .close-me:hover {
-      background: white;
-      opacity: 1; }
-  .person-content .close-me {
-    display: none; }
+      background: white; }
 
 #publics ul {
   margin-top: 0; }
@@ -422,12 +421,16 @@ nav {
   article.post.type-post img {
     width: 100%; }
   .person-content {
-    display: none;
     min-height: 100px; }
     .person-content img {
       width: 300px; }
   .person-list-object {
-    display: none; }
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 200px; }
+  #people-person-content-list {
+    position: relative; }
   main {
     position: relative; }
   .next-post, .prev-post {
@@ -500,14 +503,14 @@ nav {
     height: 20pt; }
   ol.section-list li, ul.section-list li {
     text-shadow: -1px -0.25px 0 #d0cbc7, 0.25px -0.25px 0 #d0cbc7, -0.25px 0.25px 0 #d0cbc7, 0.25px 0.25px 0 #d0cbc7; }
-    ol.section-list li:hover, ol.section-list li a:hover, ul.section-list li:hover, ul.section-list li a:hover {
+    ol.section-list li:hover, ol.section-list li a:hover, ol.section-list li.current-clicked, ul.section-list li:hover, ul.section-list li a:hover, ul.section-list li.current-clicked {
       color: #000;
       text-shadow: -1px -0.25px 0 #000, 0.25px -0.25px 0 #000, -0.25px 0.25px 0 #000, 0.25px 0.25px 0 #000; }
-      ol.section-list li:hover.no-content, ol.section-list li:hover.current, ol.section-list li:hover.current-clicked, ol.section-list li a:hover.no-content, ol.section-list li a:hover.current, ol.section-list li a:hover.current-clicked, ul.section-list li:hover.no-content, ul.section-list li:hover.current, ul.section-list li:hover.current-clicked, ul.section-list li a:hover.no-content, ul.section-list li a:hover.current, ul.section-list li a:hover.current-clicked {
+      ol.section-list li:hover.no-content, ol.section-list li:hover.current, ol.section-list li a:hover.no-content, ol.section-list li a:hover.current, ol.section-list li.current-clicked.no-content, ol.section-list li.current-clicked.current, ul.section-list li:hover.no-content, ul.section-list li:hover.current, ul.section-list li a:hover.no-content, ul.section-list li a:hover.current, ul.section-list li.current-clicked.no-content, ul.section-list li.current-clicked.current {
         font-weight: 500;
         cursor: initial !important;
         text-shadow: -1px -0.25px 0 #d0cbc7, 0.25px -0.25px 0 #d0cbc7, -0.25px 0.25px 0 #d0cbc7, 0.25px 0.25px 0 #d0cbc7; }
-      ol.section-list li:hover.current, ol.section-list li:hover.current-clicked, ol.section-list li a:hover.current, ol.section-list li a:hover.current-clicked, ul.section-list li:hover.current, ul.section-list li:hover.current-clicked, ul.section-list li a:hover.current, ul.section-list li a:hover.current-clicked {
+      ol.section-list li:hover.current, ol.section-list li:hover.current-clicked, ol.section-list li a:hover.current, ol.section-list li a:hover.current-clicked, ol.section-list li.current-clicked.current, ol.section-list li.current-clicked.current-clicked, ul.section-list li:hover.current, ul.section-list li:hover.current-clicked, ul.section-list li a:hover.current, ul.section-list li a:hover.current-clicked, ul.section-list li.current-clicked.current, ul.section-list li.current-clicked.current-clicked {
         color: #000; }
   #nav-mobile-logo {
     display: none; }

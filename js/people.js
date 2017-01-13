@@ -17,7 +17,20 @@ jQuery(function($){
 	
 	var lastURL = "";
 	var currentUrl = "  ";
-
+	
+	$('.close-me').click(function(e){
+		var currUrl = $(this).data('close-posturl');
+		var parent = $("#people-person-content-list li[data-posturl='" + currUrl +"']");
+		var parentList = $("#people-list li[data-posturl='" + currUrl +"']");
+		
+		parentList.removeClass('current-clicked');
+		parent.fadeOut(600).removeClass('current-person');
+		
+		
+	});
+	
+	$('.person-list-object').fadeOut();
+	
 	
 	// a person's name has been clicked
 	$('#people-list li').click(function(e){
@@ -29,17 +42,17 @@ jQuery(function($){
 		console.log('^^^^');
 		console.log("clicked url: " + currentUrl.toString());
 		
-		if(pContent.hasClass('closed')) {
-			pContent.slideToggle(500);
-			pContent.removeClass('closed');
-		}		
+		//if(pContent.hasClass('closed')) {
+			//pContent.slideToggle(500);
+			//pContent.removeClass('closed');
+		//}		
 		
 		if(currentUrl !== lastURL) {
 			if(windowWidth >= 800) { // Desktop
 				if(!currClickedElement.hasClass('no-content')) {		// have content
 
 					$('.current-clicked').removeClass('current-clicked'); // remove any old clicked elements
-					$('.current-person').slideUp(500).removeClass('current-person'); // removed any old displayed people objects
+					$('.current-person').fadeOut(600).removeClass('current-person'); // removed any old displayed people objects
 
 
 					currClickedElement.addClass('current-clicked');
@@ -49,11 +62,11 @@ jQuery(function($){
 					console.log("content");
 					console.log(content);
 					content.addClass('current-person');
-					content.slideDown(500);
+					content.fadeIn(1200);
 				}
 			} else { // mobile
 				content = $(this).find('.nav-person-content');
-				content.slideToggle(500);
+				content.fadeIn(1200);
 			}
 			
 			}

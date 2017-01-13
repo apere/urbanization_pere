@@ -14,6 +14,7 @@
     echo "no-content"; } else {echo "person-list-object";}?>">
 			<div class = "individual-person-content">
 				<?php the_content() ?>
+				<div class="close-me" data-close-posturl="<?php echo(get_permalink()) ?>">^</div>		
 			</div>
 		</li>
 	<?php endif; ?>
