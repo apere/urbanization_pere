@@ -2,6 +2,10 @@ html {
 	background: $nav-background-color;
 
 	&.mobile-html {
+		#office-logo {
+			visibility: hidden;
+		}
+		
 		::-webkit-scrollbar { 
     	display: none; 
 		}
