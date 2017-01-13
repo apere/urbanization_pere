@@ -144,15 +144,13 @@ main {
 	line-height: 60px;
 	width: 30px;
 	text-align: center;
-	background: rgba(255,255,255, .2);
 	transition:all 400ms ease-in-out;
 	margin-top: calc(65vh - 60px);
 	height: 60px;
-	opacity:.7;
+	opacity:.3;
 	
 	&:hover {
 		opacity: 1;
-		background: rgba(255,255,255, 1);
 	}
 }
 

@@ -465,14 +465,12 @@ nav {
     line-height: 60px;
     width: 30px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.2);
     transition: all 400ms ease-in-out;
     margin-top: calc(65vh - 60px);
     height: 60px;
-    opacity: .7; }
+    opacity: .3; }
     .next-post:hover, .prev-post:hover {
-      opacity: 1;
-      background: white; } }
+      opacity: 1; } }
 
 @media only screen and (min-width: 800px) and (min-width: 1275px) {
   .next-post {

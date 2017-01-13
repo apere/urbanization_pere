@@ -7,35 +7,31 @@
 
 jQuery(function($){
 	var open = false;
+	var lastURL = "";
 	var lastClicked = "";
 	var lastClickedElement;
-	var currClickedElement;
-	var pContent = $('.person-content');
-	var windowWidth = window.innerWidth;
 	var lastClickedObject = null;
-	var content = "";
-	
-	var lastURL = "";
+	var currClickedElement;
 	var currentUrl = "  ";
+	var content = "";
+	var pContent = $('.person-content');
 	var winWidth = $( window ).width();
 	
+	$('.person-list-object').fadeOut(); // make sure all person objects are hidden
+	
 	if(winWidth < 800){
-		$('html').addClass('mobile-html');
+		$('html').addClass('mobile-html'); // add mobile class for easy css targeting
 	}
 	
-	
-	$('.close-me').click(function(e){
+	$('.close-me').click(function(e){ // close button
 		var currUrl = $(this).data('close-posturl');
 		var parent = $("#people-person-content-list li[data-posturl='" + currUrl +"']");
 		var parentList = $("#people-list li[data-posturl='" + currUrl +"']");
 		
-		parentList.removeClass('current-clicked');
-		parent.fadeOut(600).removeClass('current-person');
+		parentList.removeClass('current-clicked'); // un-bold person link
+		parent.fadeOut(600).removeClass('current-person'); // close person object
 	});
-	
-	$('.person-list-object').fadeOut();
-	
-	
+		
 	// a person's name has been clicked
 	$('#people-list li span').click(function(e){
 
@@ -44,13 +40,7 @@ jQuery(function($){
 		currentUrl = currentUrl.split(" ").join("-");
 		currClickedElement = $(this).parent();
 		
-		console.log('^^^^');
-		console.log("clicked url: " + currentUrl.toString());
-		
-		//if(pContent.hasClass('closed')) {
-			//pContent.slideToggle(500);
-			//pContent.removeClass('closed');
-		//}		
+		//console.log("clicked url: " + currentUrl.toString());
 		
 		if(currentUrl !== lastURL && winWidth >= 800) { // Desktop
 			if(!currClickedElement.hasClass('no-content')) {		// have content
@@ -58,32 +48,21 @@ jQuery(function($){
 				$('.current-clicked').removeClass('current-clicked'); // remove any old clicked elements
 				$('.current-person').fadeOut(600).removeClass('current-person'); // removed any old displayed people objects
 
-
 				currClickedElement.addClass('current-clicked');
 				pContent.removeClass('closed');
 
-				content = $(".person-list-object[data-posturl='" + currentUrl.toString() + "']");
-				console.log("content");
-				console.log(content);
+				content = $(".person-list-object[data-posturl='" + currentUrl.toString() + "']");  // get the corresponding lift object
 				content.addClass('current-person');
 				content.fadeIn(1200);
 			}
 		} else { // mobile
-			//$('.current-person').fadeOut(600).removeClass('current-person');
-
 			content = currClickedElement.find('.nav-person-content');
 			content.toggleClass('current-person');
 			content.slideToggle(500);
 		}
 			
-		
 		lastClickedElement = currClickedElement;
 		lastClickedObject = content;
 		lastURL = currentUrl;
-		
-		
-		
-	});
-	
-	
+	});	
 });
