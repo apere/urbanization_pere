@@ -1,6 +1,13 @@
 html {
 	background: $nav-background-color;
+
+	&.mobile-html {
+		::-webkit-scrollbar { 
+    	display: none; 
+		}
+	}
 }
+
 
 #mobile-post-head {
 	display: none;

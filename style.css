@@ -120,6 +120,8 @@ blockquote, .quote {
 
 html {
   background: #FFF; }
+  html.mobile-html ::-webkit-scrollbar {
+    display: none; }
 
 #mobile-post-head {
   display: none; }

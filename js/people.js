@@ -19,6 +19,10 @@ jQuery(function($){
 	var currentUrl = "  ";
 	var winWidth = $( window ).width();
 	
+	if(winWidth < 800){
+		$('html').addClass('mobile-html');
+	}
+	
 	
 	$('.close-me').click(function(e){
 		var currUrl = $(this).data('close-posturl');
