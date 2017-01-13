@@ -256,6 +256,11 @@ ol, ul {
 
 #people-list {
   margin-bottom: 3.5em; }
+  #people-list li {
+    cursor: default; }
+  #people-list li span {
+    display: block;
+    cursor: pointer; }
 
 nav ul {
   list-style: none; }

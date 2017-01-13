@@ -47,6 +47,14 @@ ol, ul {
 
 #people-list {
 	margin-bottom: 3.5em;
+	li {
+		cursor: default;
+	}
+	
+	li span {
+		display: block;
+		cursor: pointer;
+	}
 }
 
 nav {
