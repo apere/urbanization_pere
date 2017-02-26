@@ -201,7 +201,11 @@ article.post.type-post img {
 .person-content {
   position: relative; }
   .person-content img {
-    width: 100%; }
+    max-width: 250px;
+    width: inherit;
+    height: auto;
+    display: block;
+    margin: 0 auto; }
   .person-content:not(.closed) .close-me {
     position: absolute;
     bottom: -40px;
@@ -452,7 +456,8 @@ nav {
     min-height: 100px; }
     .person-content img {
       width: 250px;
-      height: auto; }
+      height: auto;
+      display: inline-block; }
   .person-list-object {
     position: absolute;
     top: 0;

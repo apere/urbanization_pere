@@ -126,7 +126,11 @@ article.post.type-post {
 .person-content {
 	// do not put transition timing here (handled in JS)
 	img {
-		width: 100%;
+		max-width: 250px;
+		width: inherit;
+		height: auto;
+		display: block;
+		margin: 0 auto;
 	}
 	
 	position: relative;
