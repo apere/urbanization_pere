@@ -113,7 +113,8 @@ article.post.type-post {
 	// do not put transition timing here (handled in JS)
 	min-height: 100px;
 	img {
-		width: 300px;
+		width: 250px;
+		height: auto;
 	}
 }
 

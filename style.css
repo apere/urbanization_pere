@@ -451,7 +451,8 @@ nav {
   .person-content {
     min-height: 100px; }
     .person-content img {
-      width: 300px; }
+      width: 250px;
+      height: auto; }
   .person-list-object {
     position: absolute;
     top: 0;
